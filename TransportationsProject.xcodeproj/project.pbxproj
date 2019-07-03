@@ -9,10 +9,20 @@
 /* Begin PBXBuildFile section */
 		1F1F47546097C3F6959D030E /* Pods_TransportationsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */; };
 		D09968F022CD315D00713B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09968EF22CD315D00713B37 /* AppDelegate.swift */; };
-		D09968F222CD315D00713B37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09968F122CD315D00713B37 /* ViewController.swift */; };
-		D09968F522CD315D00713B37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09968F322CD315D00713B37 /* Main.storyboard */; };
 		D09968F722CD315E00713B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09968F622CD315E00713B37 /* Assets.xcassets */; };
 		D09968FA22CD315E00713B37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09968F822CD315E00713B37 /* LaunchScreen.storyboard */; };
+		D0D3B69D22CD3E6400491B60 /* transports.json in Resources */ = {isa = PBXBuildFile; fileRef = D0D3B69C22CD3E6400491B60 /* transports.json */; };
+		D0D3B6A222CD3E8600491B60 /* Geogrotesque-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0D3B69F22CD3E8600491B60 /* Geogrotesque-Medium.otf */; };
+		D0D3B6A322CD3E8600491B60 /* Geogrotesque-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0D3B6A022CD3E8600491B60 /* Geogrotesque-Regular.otf */; };
+		D0D3B6A422CD3E8600491B60 /* Geogrotesque-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0D3B6A122CD3E8600491B60 /* Geogrotesque-Bold.otf */; };
+		D0D3B6AD22CD3EC400491B60 /* TransportsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6A722CD3EC400491B60 /* TransportsPresenter.swift */; };
+		D0D3B6AE22CD3EC400491B60 /* TransportsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6A822CD3EC400491B60 /* TransportsRouter.swift */; };
+		D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6A922CD3EC400491B60 /* TransportsViewController.swift */; };
+		D0D3B6B022CD3EC400491B60 /* TransportsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */; };
+		D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */; };
+		D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */; };
+		D0D3B6B622CD3EE700491B60 /* Transports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D3B6B522CD3EE700491B60 /* Transports.storyboard */; };
+		D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6B822CD40C200491B60 /* Enviroment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +30,21 @@
 		99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.debug.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D09968EC22CD315D00713B37 /* TransportationsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransportationsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09968EF22CD315D00713B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D09968F122CD315D00713B37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D09968F422CD315D00713B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D09968F622CD315E00713B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09968F922CD315E00713B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D09968FB22CD315E00713B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D3B69C22CD3E6400491B60 /* transports.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = transports.json; sourceTree = "<group>"; };
+		D0D3B69F22CD3E8600491B60 /* Geogrotesque-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geogrotesque-Medium.otf"; sourceTree = "<group>"; };
+		D0D3B6A022CD3E8600491B60 /* Geogrotesque-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geogrotesque-Regular.otf"; sourceTree = "<group>"; };
+		D0D3B6A122CD3E8600491B60 /* Geogrotesque-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Geogrotesque-Bold.otf"; sourceTree = "<group>"; };
+		D0D3B6A722CD3EC400491B60 /* TransportsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsPresenter.swift; sourceTree = "<group>"; };
+		D0D3B6A822CD3EC400491B60 /* TransportsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsRouter.swift; sourceTree = "<group>"; };
+		D0D3B6A922CD3EC400491B60 /* TransportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsViewController.swift; sourceTree = "<group>"; };
+		D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsApiClient.swift; sourceTree = "<group>"; };
+		D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsApiClientMock.swift; sourceTree = "<group>"; };
+		D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsDataManager.swift; sourceTree = "<group>"; };
+		D0D3B6B522CD3EE700491B60 /* Transports.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transports.storyboard; sourceTree = "<group>"; };
+		D0D3B6B822CD40C200491B60 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
 		FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransportationsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -54,7 +74,6 @@
 				99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */,
 				897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,13 +99,87 @@
 			isa = PBXGroup;
 			children = (
 				D09968EF22CD315D00713B37 /* AppDelegate.swift */,
-				D09968F122CD315D00713B37 /* ViewController.swift */,
-				D09968F322CD315D00713B37 /* Main.storyboard */,
-				D09968F622CD315E00713B37 /* Assets.xcassets */,
+				D0D3B69A22CD3E0200491B60 /* Resources */,
+				D0D3B69B22CD3E1E00491B60 /* Code */,
 				D09968F822CD315E00713B37 /* LaunchScreen.storyboard */,
 				D09968FB22CD315E00713B37 /* Info.plist */,
 			);
 			path = TransportationsProject;
+			sourceTree = "<group>";
+		};
+		D0D3B69A22CD3E0200491B60 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D09968F622CD315E00713B37 /* Assets.xcassets */,
+				D0D3B69E22CD3E8600491B60 /* Fonts */,
+				D0D3B69C22CD3E6400491B60 /* transports.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0D3B69B22CD3E1E00491B60 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B6B722CD40A100491B60 /* Common */,
+				D0D3B6A522CD3E9400491B60 /* Modules */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		D0D3B69E22CD3E8600491B60 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B69F22CD3E8600491B60 /* Geogrotesque-Medium.otf */,
+				D0D3B6A022CD3E8600491B60 /* Geogrotesque-Regular.otf */,
+				D0D3B6A122CD3E8600491B60 /* Geogrotesque-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D0D3B6A522CD3E9400491B60 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B6A622CD3E9F00491B60 /* TransportsMap */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D0D3B6A622CD3E9F00491B60 /* TransportsMap */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B6B422CD3ED600491B60 /* View */,
+				D0D3B6B322CD3ECB00491B60 /* ApiClient */,
+				D0D3B6A722CD3EC400491B60 /* TransportsPresenter.swift */,
+				D0D3B6A822CD3EC400491B60 /* TransportsRouter.swift */,
+				D0D3B6A922CD3EC400491B60 /* TransportsViewController.swift */,
+				D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */,
+			);
+			path = TransportsMap;
+			sourceTree = "<group>";
+		};
+		D0D3B6B322CD3ECB00491B60 /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */,
+				D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		D0D3B6B422CD3ED600491B60 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B6B522CD3EE700491B60 /* Transports.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0D3B6B722CD40A100491B60 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B6B822CD40C200491B60 /* Enviroment.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +243,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D3B6A322CD3E8600491B60 /* Geogrotesque-Regular.otf in Resources */,
+				D0D3B6A422CD3E8600491B60 /* Geogrotesque-Bold.otf in Resources */,
 				D09968FA22CD315E00713B37 /* LaunchScreen.storyboard in Resources */,
+				D0D3B6A222CD3E8600491B60 /* Geogrotesque-Medium.otf in Resources */,
+				D0D3B6B622CD3EE700491B60 /* Transports.storyboard in Resources */,
 				D09968F722CD315E00713B37 /* Assets.xcassets in Resources */,
-				D09968F522CD315D00713B37 /* Main.storyboard in Resources */,
+				D0D3B69D22CD3E6400491B60 /* transports.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +329,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D09968F222CD315D00713B37 /* ViewController.swift in Sources */,
+				D0D3B6B022CD3EC400491B60 /* TransportsApiClient.swift in Sources */,
+				D0D3B6AD22CD3EC400491B60 /* TransportsPresenter.swift in Sources */,
+				D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */,
+				D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */,
+				D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */,
+				D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */,
+				D0D3B6AE22CD3EC400491B60 /* TransportsRouter.swift in Sources */,
 				D09968F022CD315D00713B37 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,14 +343,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D09968F322CD315D00713B37 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D09968F422CD315D00713B37 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D09968F822CD315E00713B37 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
