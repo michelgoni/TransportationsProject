@@ -10,16 +10,17 @@ import UIKit
 
 class TransportsApiClientMock: TransportsApiClientProtocol {
     
-//    func example( success: @escaping (ModulesResponse) -> Void, failure: @escaping (Error) -> Void) {
-//        if let path = Bundle.main.path(forResource: "Home", ofType: "json") {
-//            do {
-//                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-//                let response = try JSONDecoder().decode(ModulesResponse.self, from: data)
-//                success(response)
-//            } catch {
-//                failure(error)
-//            }
-//        }
-//    }
-    
+    func getTransports(firstQueryitem: String, secondQueryItem: String, completion: @escaping (Result<TransportResponse?, ApiError>) -> Void) {
+        
+        if let path = Bundle.main.path(forResource: "transports", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let response = try JSONDecoder().decode(TransportResponse.self, from: data)
+                completion(.success(response))
+            } catch {
+                completion(.failure(.jsonParsingFailure))
+            }
+        }
+        
+    }
 }

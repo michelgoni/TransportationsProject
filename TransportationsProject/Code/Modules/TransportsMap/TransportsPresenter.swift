@@ -12,6 +12,7 @@ protocol TransportsPresenterProtocol: class {
     /**
      * Add here your methods for communication VIEW -> PRESENTER
      */
+    func getContent()
 }
 
 class TransportsPresenter {
@@ -34,6 +35,13 @@ class TransportsPresenter {
 }
 
 extension TransportsPresenter: TransportsPresenterProtocol {
+    func getContent() {
+        dataManager.getTransports { (result) in
+            debugPrint(result)
+        }
+    }
+    
+    
     
 }
 

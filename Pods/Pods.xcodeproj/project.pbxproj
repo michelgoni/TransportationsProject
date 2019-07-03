@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = GoogleMaps;
+			productName = GoogleMaps;
 		};
 /* End PBXAggregateTarget section */
 
@@ -102,12 +103,12 @@
 		77DB807A0CAD545DA96CC1251480E56D /* Geocoder+Support.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Geocoder+Support.swift"; path = "Sources/Geocoding/Geocoder+Support.swift"; sourceTree = "<group>"; };
 		7B7CE45125F1B449EFD41DACE85A6577 /* LocationManager+Support.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LocationManager+Support.swift"; path = "Sources/LocationManager+Support.swift"; sourceTree = "<group>"; };
 		8116FC50EA1C6C748298A03D0560F356 /* OpenStreetGeocoderRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OpenStreetGeocoderRequest.swift; path = Sources/Geocoding/Services/OpenStreetGeocoderRequest.swift; sourceTree = "<group>"; };
-		812E16004A24035323F241E97B98A560 /* Pods_TransportationsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TransportationsProject.framework; path = "Pods-TransportationsProject.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		812E16004A24035323F241E97B98A560 /* Pods_TransportationsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransportationsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		845A20E1D368AE919EB8DF07AAB469DD /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
 		8E73455C8751C0C971EEC82E24938B29 /* Pods-TransportationsProject.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TransportationsProject.modulemap"; sourceTree = "<group>"; };
 		9BEDCD138BEF77093908CA249D95F9C2 /* AutoCompleteRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AutoCompleteRequest.swift; path = "Sources/Auto Complete/AutoCompleteRequest.swift"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A042427FDF0E9CFFCC0108BE128EB377 /* SwiftLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftLocation.framework; path = SwiftLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A042427FDF0E9CFFCC0108BE128EB377 /* SwiftLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08CA4F84C309904B9E657FF77C8112C /* LocationByIPRequest+Support.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LocationByIPRequest+Support.swift"; path = "Sources/Locating By IP/LocationByIPRequest+Support.swift"; sourceTree = "<group>"; };
 		A6710D34D0AB132E2C91DF5F0147C492 /* SwiftLocation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftLocation-Info.plist"; sourceTree = "<group>"; };
 		A7113558E8DD790EFEFCB16B54396EA6 /* Observers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observers.swift; path = "Sources/Data Models/Observers.swift"; sourceTree = "<group>"; };
@@ -179,7 +180,6 @@
 				21A590DA0E1B06C5F1B2164CB9E66409 /* Maps */,
 				6F6C262A4CDCF63949B328BD776E9FE1 /* Support Files */,
 			);
-			name = GoogleMaps;
 			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
@@ -267,7 +267,6 @@
 				692BA648E1FB02E7AF429E5B06B27882 /* Timeout.swift */,
 				1558EABA178F71751EC6C79B106B84E5 /* Support Files */,
 			);
-			name = SwiftLocation;
 			path = SwiftLocation;
 			sourceTree = "<group>";
 		};
@@ -401,14 +400,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 22FDB2271883904BD2BB561377356C5F /* Products */;

@@ -28,6 +28,7 @@ class TransportsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter?.getContent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
