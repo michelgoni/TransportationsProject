@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F1F47546097C3F6959D030E /* Pods_TransportationsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */; };
 		D09968F022CD315D00713B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09968EF22CD315D00713B37 /* AppDelegate.swift */; };
 		D09968F222CD315D00713B37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09968F122CD315D00713B37 /* ViewController.swift */; };
 		D09968F522CD315D00713B37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09968F322CD315D00713B37 /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.release.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.release.xcconfig"; sourceTree = "<group>"; };
+		99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.debug.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.debug.xcconfig"; sourceTree = "<group>"; };
 		D09968EC22CD315D00713B37 /* TransportationsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransportationsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09968EF22CD315D00713B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D09968F122CD315D00713B37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		D09968F622CD315E00713B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D09968F922CD315E00713B37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D09968FB22CD315E00713B37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransportationsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F1F47546097C3F6959D030E /* Pods_TransportationsProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23D4C14F7ACA6534CFFC8F70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60DD23CBC112325E5D2FCBD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */,
+				897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D09968E322CD315D00713B37 = {
 			isa = PBXGroup;
 			children = (
 				D09968EE22CD315D00713B37 /* TransportationsProject */,
 				D09968ED22CD315D00713B37 /* Products */,
+				60DD23CBC112325E5D2FCBD1 /* Pods */,
+				23D4C14F7ACA6534CFFC8F70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +96,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D09968FE22CD315E00713B37 /* Build configuration list for PBXNativeTarget "TransportationsProject" */;
 			buildPhases = (
+				1FB7A147743C31F22A48B997 /* [CP] Check Pods Manifest.lock */,
 				D09968E822CD315D00713B37 /* Sources */,
 				D09968E922CD315D00713B37 /* Frameworks */,
 				D09968EA22CD315D00713B37 /* Resources */,
+				3A1A5FC6B73F548B2792B98E /* [CP] Embed Pods Frameworks */,
+				78EA23B40EA97B26F2FA1D72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +157,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FB7A147743C31F22A48B997 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TransportationsProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A1A5FC6B73F548B2792B98E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftLocation/SwiftLocation.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftLocation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78EA23B40EA97B26F2FA1D72 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D09968E822CD315D00713B37 /* Sources */ = {
@@ -280,6 +377,7 @@
 		};
 		D09968FF22CD315E00713B37 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +396,7 @@
 		};
 		D099690022CD315E00713B37 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
