@@ -16,7 +16,8 @@ protocol CoordinateRepresentable: Codable {
 struct Coordinate: CoordinateRepresentable {
     
     static var mockCoordinate: Coordinate { 
-        return Coordinate(latitude: 38.71395031, longitude: -9.13916688)
+        return Coordinate(latitude: Constants.MockCoordinates.mockLatitude,
+                          longitude: Constants.MockCoordinates.mockLongitude)
     }
     var latitude: Double
     var longitude: Double

@@ -30,8 +30,13 @@ struct TransportationElement: TransportationElementRepresentable {
     func getMarker() -> GMSMarker {
         
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        marker.icon = color.image(CGSize(width: 15, height: 15))
+        marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude,
+                                                 longitude: coordinate.longitude)
+        let markerView = MarkerView(frame: CGRect(x: 0, y: 0, width: Constants.MarkerView.markerViewWidth,
+                                                  height: Constants.MarkerView.markerViewHeight), color: color)
+        marker.iconView = markerView
+       
+       
        
         return marker
     }

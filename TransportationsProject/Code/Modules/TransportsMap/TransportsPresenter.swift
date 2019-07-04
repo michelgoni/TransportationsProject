@@ -42,21 +42,23 @@ class TransportsPresenter {
                                                zoom: 15,
                                                bearing: 0,
                                                viewingAngle: 0)
-        
 
         let markers = mapPoints.transportElements.map { element -> GMSMarker in
             
             return element.getMarker()
         }
         return MapPointsPosition(cameraPosition: cameraPosition, markers: markers)
-
-        
     }
 }
 
 extension TransportsPresenter: TransportsPresenterProtocol {
     func getContent() {
+        
+        view?.showLoadingActivityIndicator()
+        
         dataManager.getTransports { (result) in
+            
+            self.view?.hideLoadingActivityIndicator()
             switch result {
             case .success(let transports):
                 guard let transports = transports else {return}
@@ -69,16 +71,12 @@ extension TransportsPresenter: TransportsPresenterProtocol {
                 let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
                 guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
                 self.view?.showUserLocation(mapPoints: mapPoints)
-               
                 
-             
             case .failure(let error):
+                 self.view?.hideLoadingActivityIndicator()
+                 self.view?.showError(message: error.localizedDescription)
                 debugPrint(error)
             }
         }
     }
-    
-    
-    
 }
-

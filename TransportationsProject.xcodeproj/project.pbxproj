@@ -11,6 +11,10 @@
 		2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309DF22CE04070092484A /* SignedNumeric+Extensions.swift */; };
 		2D1309E222CE28930092484A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309E122CE28930092484A /* UIColor+Extensions.swift */; };
 		2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309E322CE2BB10092484A /* MapPointsModel.swift */; };
+		D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D6DDF22CE915C004F9638 /* MarkerView.swift */; };
+		D00D6DE222CE99DA004F9638 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D6DE122CE99DA004F9638 /* ActivityIndicator.swift */; };
+		D00D6DE422CE9A18004F9638 /* ActivityIndicatorScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00D6DE322CE9A18004F9638 /* ActivityIndicatorScreen.xib */; };
+		D00D6DE922CE9D0F004F9638 /* NIbabble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D6DE822CE9D0F004F9638 /* NIbabble.swift */; };
 		D09968F022CD315D00713B37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09968EF22CD315D00713B37 /* AppDelegate.swift */; };
 		D09968F722CD315E00713B37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D09968F622CD315E00713B37 /* Assets.xcassets */; };
 		D09968FA22CD315E00713B37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09968F822CD315E00713B37 /* LaunchScreen.storyboard */; };
@@ -44,6 +48,10 @@
 		2D1309E322CE2BB10092484A /* MapPointsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsModel.swift; sourceTree = "<group>"; };
 		897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.release.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.release.xcconfig"; sourceTree = "<group>"; };
 		99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.debug.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.debug.xcconfig"; sourceTree = "<group>"; };
+		D00D6DDF22CE915C004F9638 /* MarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerView.swift; sourceTree = "<group>"; };
+		D00D6DE122CE99DA004F9638 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		D00D6DE322CE9A18004F9638 /* ActivityIndicatorScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorScreen.xib; sourceTree = "<group>"; };
+		D00D6DE822CE9D0F004F9638 /* NIbabble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIbabble.swift; sourceTree = "<group>"; };
 		D09968EC22CD315D00713B37 /* TransportationsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransportationsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D09968EF22CD315D00713B37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D09968F622CD315E00713B37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -110,6 +118,32 @@
 				897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D00D6DE522CE9BED004F9638 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				D00D6DE122CE99DA004F9638 /* ActivityIndicator.swift */,
+				D00D6DE322CE9A18004F9638 /* ActivityIndicatorScreen.xib */,
+				D00D6DE822CE9D0F004F9638 /* NIbabble.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
+		D00D6DE622CE9BFF004F9638 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				D0D3B6B822CD40C200491B60 /* Enviroment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		D00D6DE722CE9C08004F9638 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D0EAC1BA22CDAD5600C052A2 /* Constants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		D09968E322CD315D00713B37 = {
@@ -207,6 +241,7 @@
 		D0D3B6B422CD3ED600491B60 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D00D6DDF22CE915C004F9638 /* MarkerView.swift */,
 				D0D3B6B522CD3EE700491B60 /* Transports.storyboard */,
 			);
 			path = View;
@@ -215,9 +250,10 @@
 		D0D3B6B722CD40A100491B60 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D00D6DE522CE9BED004F9638 /* ActivityIndicator */,
 				2D1309DE22CE03FB0092484A /* Extensions */,
-				D0D3B6B822CD40C200491B60 /* Enviroment.swift */,
-				D0EAC1BA22CDAD5600C052A2 /* Constants.swift */,
+				D00D6DE622CE9BFF004F9638 /* Environment */,
+				D00D6DE722CE9C08004F9638 /* Constants */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -327,6 +363,7 @@
 				D0D3B6A222CD3E8600491B60 /* Geogrotesque-Medium.otf in Resources */,
 				D0D3B6B622CD3EE700491B60 /* Transports.storyboard in Resources */,
 				D09968F722CD315E00713B37 /* Assets.xcassets in Resources */,
+				D00D6DE422CE9A18004F9638 /* ActivityIndicatorScreen.xib in Resources */,
 				D0D3B69D22CD3E6400491B60 /* transports.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,14 +428,17 @@
 				D0D3B6BD22CD421A00491B60 /* Endpoint.swift in Sources */,
 				D0D3B6AD22CD3EC400491B60 /* TransportsPresenter.swift in Sources */,
 				D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */,
+				D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */,
 				D0EAC1BB22CDAD5600C052A2 /* Constants.swift in Sources */,
 				D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */,
 				D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */,
 				D0D3B6C622CD446700491B60 /* TransportsApi.swift in Sources */,
 				D0EAC1C222CDBC8E00C052A2 /* TransportationElement.swift in Sources */,
+				D00D6DE222CE99DA004F9638 /* ActivityIndicator.swift in Sources */,
 				2D1309E222CE28930092484A /* UIColor+Extensions.swift in Sources */,
 				D0D3B6BF22CD425400491B60 /* TransportApiCase.swift in Sources */,
 				2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */,
+				D00D6DE922CE9D0F004F9638 /* NIbabble.swift in Sources */,
 				D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */,
 				2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */,
 				D0D3B6AE22CD3EC400491B60 /* TransportsRouter.swift in Sources */,
