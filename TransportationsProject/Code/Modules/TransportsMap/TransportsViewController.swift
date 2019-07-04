@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMaps
 
 protocol TransportsViewProtocol: class {
     /**
@@ -14,12 +15,14 @@ protocol TransportsViewProtocol: class {
      */
     
     func set(presenter: TransportsPresenterProtocol)
+    func showUserLocation(mapPoints: MapPointsPosition)
 }
 
 class TransportsViewController: UIViewController {
     
     // MARK: - Public properties
     
+    @IBOutlet weak var mapView: GMSMapView!
     // MARK: - Private properties
     
     private var presenter:TransportsPresenterProtocol?
@@ -47,8 +50,22 @@ class TransportsViewController: UIViewController {
 
 extension TransportsViewController:  TransportsViewProtocol {
     
+    
     func set(presenter: TransportsPresenterProtocol) {
         self.presenter = presenter
     }
+    
+    func showUserLocation(mapPoints: MapPointsPosition) {
+        mapView.delegate = self
+        mapView.clear()
+        mapView.camera = mapPoints.cameraPosition
+       
+       mapPoints.markers.forEach({$0.map = mapView})
+    }
+    
+}
+
+extension TransportsViewController: GMSMapViewDelegate {
+    
     
 }

@@ -40,6 +40,6 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>isMock</key>
-	<false/>
+	<true/>
 </dict>
 </plist>

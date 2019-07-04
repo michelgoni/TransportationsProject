@@ -17,9 +17,24 @@
                     <view key="view" contentMode="scaleToFill" id="8Qu-Y5-0ZL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8H-3C-dZy" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WVo-5d-0kV" firstAttribute="trailing" secondItem="S8H-3C-dZy" secondAttribute="trailing" id="gNL-bg-fWk"/>
+                            <constraint firstItem="WVo-5d-0kV" firstAttribute="bottom" secondItem="S8H-3C-dZy" secondAttribute="bottom" id="mdv-X3-q3N"/>
+                            <constraint firstItem="S8H-3C-dZy" firstAttribute="leading" secondItem="WVo-5d-0kV" secondAttribute="leading" id="rwa-Ik-c4U"/>
+                            <constraint firstItem="S8H-3C-dZy" firstAttribute="top" secondItem="WVo-5d-0kV" secondAttribute="top" id="sQk-Xu-CZq"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WVo-5d-0kV"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="S8H-3C-dZy" id="GFf-lP-3R3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rGI-bW-xFN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
