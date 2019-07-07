@@ -63,7 +63,7 @@ extension TransportDetailViewController:  TransportDetailViewProtocol {
     }
     
     func showSections(sections: [SectionsModuleRepresentable]) {
-         elementsDataSource.setDataSource(elements: sections)
+        elementsDataSource.setDataSource(elements: sections)
         tvDetailTransport.reloadData()
     }
     

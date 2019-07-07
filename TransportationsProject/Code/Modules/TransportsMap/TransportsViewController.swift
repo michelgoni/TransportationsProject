@@ -43,7 +43,7 @@ class TransportsViewController: UIViewController {
         presenter?.getContent()
         presenter?.getTitle()
     }
-
+    
     // MARK: - Actions
     
     // MARK: - Overrides
@@ -55,7 +55,7 @@ class TransportsViewController: UIViewController {
 // MARK: - TransportsViewProtocol
 
 extension TransportsViewController:  TransportsViewProtocol {
-  
+    
     func showLoadingActivityIndicator() {
         loadingScreen.show(view: view)
         

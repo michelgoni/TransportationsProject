@@ -30,6 +30,7 @@ protocol TransportationElementRepresentable {
     var coordinate: Coordinate {get set}
     var transportationDetail: TransportationDetailRepresentable {get set}
     func getMarker() -> GMSMarker
+    func getTransportationDetail() -> TransportationDetailRepresentable
 }
 
 struct TransportationElement: TransportationElementRepresentable {
@@ -47,5 +48,10 @@ struct TransportationElement: TransportationElementRepresentable {
                                     image: transportationDetail.icon)
         marker.iconView = markerView
         return marker
+    }
+    
+    func getTransportationDetail() -> TransportationDetailRepresentable {
+        
+        return transportationDetail
     }
 }

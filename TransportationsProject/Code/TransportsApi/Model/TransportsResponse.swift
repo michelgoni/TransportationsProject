@@ -32,7 +32,7 @@ struct TransportsResponse: Codable {
     let bikesAvailable: Int?
     
     enum CodingKeys: String, CodingKey {
-
+        
         case address = "name"
         case elementXPosition = "x"
         case elementYPosition = "y"
@@ -58,24 +58,6 @@ struct TransportsResponse: Codable {
         case electricCar = "467"
         case electricMotorBike = "473"
         case bike = "412"
-        
-        func retrieveColor() -> UIColor {
-            
-            switch self {
-            case .metro:
-                return .blue
-            case .bus:
-                return .brown
-            case .car:
-                return .red
-            case .electricCar:
-                return .green
-            case .electricMotorBike:
-                return .yellow
-            case .bike:
-                return .black
-            }
-        }
         
         func retrieveTransportationType() -> String {
             
@@ -142,7 +124,7 @@ struct TransportsResponse: Codable {
     
     func getTransportationDetail() -> TransportationDetailRepresentable? {
         guard let icon = CompanyZone(rawValue: companyZoneId.string)?.getIcon(),
-        let action = CompanyZone(rawValue: companyZoneId.string)?.enableAction() else {return nil}
+            let action = CompanyZone(rawValue: companyZoneId.string)?.enableAction() else {return nil}
         return TransportationDetail(address: getAddress(),
                                     icon: icon,
                                     transportationType: getTransportationType(),

@@ -20,7 +20,6 @@ extension TransportsApiCase: Endpoint {
         case .listTransports(let queryElement):
             
             return URLQueryItem(name: "upperRightLatLon", value: queryElement.firstQueryElement)
-  
         }
     }
     
@@ -30,7 +29,6 @@ extension TransportsApiCase: Endpoint {
         case .listTransports(let queryElement):
             
             return URLQueryItem(name: "lowerLeftLatLon", value: queryElement.secondQueryElement)
-
         }
     }
     
@@ -42,7 +40,7 @@ extension TransportsApiCase: Endpoint {
         
         switch self {
         case .listTransports:
-             return "/tripplan/api/v1/routers/lisboa/resources"
+            return "/tripplan/api/v1/routers/lisboa/resources"
         }
     }
 }

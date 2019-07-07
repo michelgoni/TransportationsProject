@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1F1F47546097C3F6959D030E /* Pods_TransportationsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */; };
 		2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309DF22CE04070092484A /* SignedNumeric+Extensions.swift */; };
-		2D1309E222CE28930092484A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309E122CE28930092484A /* UIColor+Extensions.swift */; };
 		2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309E322CE2BB10092484A /* MapPointsModel.swift */; };
 		D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D6DDF22CE915C004F9638 /* MarkerView.swift */; };
 		D00D6DE222CE99DA004F9638 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D6DE122CE99DA004F9638 /* ActivityIndicator.swift */; };
@@ -56,7 +55,7 @@
 		D0EBBA4322D1F3D50089F645 /* TransportDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EBBA4122D1F3D50089F645 /* TransportDetailTableViewCell.xib */; };
 		D0EBBA4522D1F6160089F645 /* TransportDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4422D1F6160089F645 /* TransportDetailSection.swift */; };
 		D0EBBA4822D1F7ED0089F645 /* ElementsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4722D1F7ED0089F645 /* ElementsDataSource.swift */; };
-		D0EBBA4A22D1F8290089F645 /* UItableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4922D1F8290089F645 /* UItableViewCell+Extensions.swift */; };
+		D0EBBA4A22D1F8290089F645 /* UITableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4922D1F8290089F645 /* UITableViewCell+Extensions.swift */; };
 		D0EBBA4F22D1FBBF0089F645 /* TextConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4E22D1FBBF0089F645 /* TextConfigurable.swift */; };
 		D0EBBA5122D1FC580089F645 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */; };
 		D0EBBA5322D1FD1A0089F645 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA5222D1FD1A0089F645 /* TextStyles.swift */; };
@@ -65,7 +64,6 @@
 
 /* Begin PBXFileReference section */
 		2D1309DF22CE04070092484A /* SignedNumeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignedNumeric+Extensions.swift"; sourceTree = "<group>"; };
-		2D1309E122CE28930092484A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		2D1309E322CE2BB10092484A /* MapPointsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsModel.swift; sourceTree = "<group>"; };
 		897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.release.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.release.xcconfig"; sourceTree = "<group>"; };
 		99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.debug.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.debug.xcconfig"; sourceTree = "<group>"; };
@@ -116,7 +114,7 @@
 		D0EBBA4122D1F3D50089F645 /* TransportDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransportDetailTableViewCell.xib; sourceTree = "<group>"; };
 		D0EBBA4422D1F6160089F645 /* TransportDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailSection.swift; sourceTree = "<group>"; };
 		D0EBBA4722D1F7ED0089F645 /* ElementsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsDataSource.swift; sourceTree = "<group>"; };
-		D0EBBA4922D1F8290089F645 /* UItableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UItableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		D0EBBA4922D1F8290089F645 /* UITableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extensions.swift"; sourceTree = "<group>"; };
 		D0EBBA4E22D1FBBF0089F645 /* TextConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConfigurable.swift; sourceTree = "<group>"; };
 		D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		D0EBBA5222D1FD1A0089F645 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
@@ -148,9 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				2D1309DF22CE04070092484A /* SignedNumeric+Extensions.swift */,
-				2D1309E122CE28930092484A /* UIColor+Extensions.swift */,
 				D0EBBA2F22D1D8300089F645 /* UIViewcontroller+Extensions.swift */,
-				D0EBBA4922D1F8290089F645 /* UItableViewCell+Extensions.swift */,
+				D0EBBA4922D1F8290089F645 /* UITableViewCell+Extensions.swift */,
 				D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */,
 				D0EBBA5422D1FD3A0089F645 /* UIFont+Extensions.swift */,
 			);
@@ -570,7 +567,7 @@
 				D0D3B6BD22CD421A00491B60 /* Endpoint.swift in Sources */,
 				D0D3B6AD22CD3EC400491B60 /* TransportsPresenter.swift in Sources */,
 				D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */,
-				D0EBBA4A22D1F8290089F645 /* UItableViewCell+Extensions.swift in Sources */,
+				D0EBBA4A22D1F8290089F645 /* UITableViewCell+Extensions.swift in Sources */,
 				D0EBBA5522D1FD3A0089F645 /* UIFont+Extensions.swift in Sources */,
 				D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */,
 				D0EBBA2622D1D7100089F645 /* TransportDetailRouter.swift in Sources */,
@@ -582,7 +579,6 @@
 				D0D3B6C622CD446700491B60 /* TransportsApi.swift in Sources */,
 				D0EAC1C222CDBC8E00C052A2 /* TransportationElement.swift in Sources */,
 				D00D6DE222CE99DA004F9638 /* ActivityIndicator.swift in Sources */,
-				2D1309E222CE28930092484A /* UIColor+Extensions.swift in Sources */,
 				D0D3B6BF22CD425400491B60 /* TransportApiCase.swift in Sources */,
 				2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */,
 				D0EBBA3922D1D9D70089F645 /* HalfModalPresetntationController.swift in Sources */,

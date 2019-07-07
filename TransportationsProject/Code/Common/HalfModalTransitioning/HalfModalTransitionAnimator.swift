@@ -17,9 +17,7 @@ class HalfModalTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioni
     }
     
     @objc func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        //        _ = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
         guard let from = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) else { return }
-        
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: { () -> Void in
             
             from.view.frame.origin.y = 800

@@ -13,7 +13,7 @@ protocol ConfigurableModuledModel {
 }
 
 class TransportDetailTableViewCell: UITableViewCell, ConfigurableModuledModel {
-  
+    
     @IBOutlet var lbDetailTransportTitle: UILabel!
     @IBOutlet var imgLbDetailTransport: UIImageView!
     @IBOutlet var lbAddressDetailTransport: UILabel!

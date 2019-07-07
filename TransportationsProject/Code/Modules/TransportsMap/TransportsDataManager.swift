@@ -12,7 +12,7 @@ protocol TransportsDataManagerProtocol: class {
     /**
      * Add here your methods for communication PRESENTER -> DATA_MANAGER
      */
-     func getTransports( completion: @escaping (Result<[TransportsResponse]?, ApiError>) -> Void)
+    func getTransports( completion: @escaping (Result<[TransportsResponse]?, ApiError>) -> Void)
     func getTitle() -> String
 }
 

@@ -28,7 +28,7 @@ class TransportsPresenter {
     
     private var dataManager: TransportsDataManagerProtocol
     private var transportElements: [TransportationElementRepresentable]?
- 
+    
     // MARK: - Initialization
     
     init(view:TransportsViewProtocol,
@@ -45,7 +45,7 @@ class TransportsPresenter {
                                                zoom: 17,
                                                bearing: 0,
                                                viewingAngle: 0)
-
+        
         let markers = mapPoints.transportElements.map { element -> GMSMarker in
             
             return element.getMarker()
@@ -55,7 +55,7 @@ class TransportsPresenter {
 }
 
 extension TransportsPresenter: TransportsPresenterProtocol {
-  
+    
     func getContent() {
         
         view?.showLoadingActivityIndicator()
@@ -75,27 +75,27 @@ extension TransportsPresenter: TransportsPresenterProtocol {
                 self.transportElements = transportElements
                 let mapPointsModel = MapPointsModel(transportElements: transportElements,
                                                     coordinate: Coordinate.mockCoordinate)
-               
+                
                 guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
                 self.view?.showUserLocation(mapPoints: mapPoints)
                 
             case .failure(let error):
-                 self.view?.hideLoadingActivityIndicator()
-                 self.view?.showError(message: error.localizedDescription)
+                self.view?.hideLoadingActivityIndicator()
+                self.view?.showError(message: error.localizedDescription)
             }
         }
     }
-
+    
     func getTitle() {
         view?.showTitle(title: dataManager.getTitle())
     }
     
     func markerTapped(coordinate: Coordinate) {
         
-         guard let transportDetail = transportElements?
+        guard let transportDetail = transportElements?
             .first(where: { $0.coordinate.latitude == coordinate.latitude
-            && $0.coordinate.longitude == coordinate.longitude})?
-            .transportationDetail else {return}
+                && $0.coordinate.longitude == coordinate.longitude})?
+            .getTransportationDetail() else {return}
         
         TransportDetailRouter().presentThirdHalfOfScreen(viewController: TransportDetailRouter(transportDetail: transportDetail).getPresentationController())
     }

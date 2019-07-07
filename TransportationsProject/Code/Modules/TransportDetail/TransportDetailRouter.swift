@@ -16,7 +16,7 @@ class TransportDetailRouter {
     var halfModalTransitioning: HalfModalTransitioning?
     
     private var view:TransportDetailViewController {
-       
+        
         let storyboard: UIStoryboard = UIStoryboard(name: "TransportDetail", bundle: nil)
         if let controller = storyboard.instantiateViewController(withIdentifier: "TransportDetail") as? TransportDetailViewController,
             let transportDetail = transportDetail {
@@ -44,7 +44,7 @@ class TransportDetailRouter {
     func present(viewController: UIViewController) {
         UIViewController.getCurrentViewController()?.present(viewController, animated: true, completion: nil)
     }
-
+    
     func presentThirdHalfOfScreen(viewController: UIViewController, modalHeight: ModalHeight = .custom(value:  UIScreen.main.bounds.height / 4)) {
         
         if let current = UIViewController.getCurrentViewController() {
@@ -55,7 +55,7 @@ class TransportDetailRouter {
             viewController.transitioningDelegate = halfModalTransitioning
         }
         present(viewController: viewController)
-    
+        
     }
     
     func getPresentationController() -> UIViewController {
