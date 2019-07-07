@@ -40,6 +40,8 @@
 		D0EAC1BE22CDB9F800C052A2 /* MapPointsPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */; };
 		D0EAC1C022CDBB7E00C052A2 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */; };
 		D0EAC1C222CDBC8E00C052A2 /* TransportationElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */; };
+		D0FE0CDD22D0B3D2002DD808 /* TransportMarkerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE0CDB22D0B3D2002DD808 /* TransportMarkerWindow.swift */; };
+		D0FE0CDE22D0B3D2002DD808 /* TransportMarkerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FE0CDC22D0B3D2002DD808 /* TransportMarkerWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,8 @@
 		D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsPosition.swift; sourceTree = "<group>"; };
 		D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationElement.swift; sourceTree = "<group>"; };
+		D0FE0CDB22D0B3D2002DD808 /* TransportMarkerWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportMarkerWindow.swift; sourceTree = "<group>"; };
+		D0FE0CDC22D0B3D2002DD808 /* TransportMarkerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransportMarkerWindow.xib; sourceTree = "<group>"; };
 		FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransportationsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -210,6 +214,7 @@
 		D0D3B6A522CD3E9400491B60 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				D0FE0CDA22D0B3D2002DD808 /* TransportDetail */,
 				D0D3B6A622CD3E9F00491B60 /* TransportsMap */,
 			);
 			path = Modules;
@@ -297,6 +302,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D0FE0CDA22D0B3D2002DD808 /* TransportDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D0FE0CDB22D0B3D2002DD808 /* TransportMarkerWindow.swift */,
+				D0FE0CDC22D0B3D2002DD808 /* TransportMarkerWindow.xib */,
+			);
+			path = TransportDetail;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +376,7 @@
 				D09968FA22CD315E00713B37 /* LaunchScreen.storyboard in Resources */,
 				D0D3B6A222CD3E8600491B60 /* Geogrotesque-Medium.otf in Resources */,
 				D0D3B6B622CD3EE700491B60 /* Transports.storyboard in Resources */,
+				D0FE0CDE22D0B3D2002DD808 /* TransportMarkerWindow.xib in Resources */,
 				D09968F722CD315E00713B37 /* Assets.xcassets in Resources */,
 				D00D6DE422CE9A18004F9638 /* ActivityIndicatorScreen.xib in Resources */,
 				D0D3B69D22CD3E6400491B60 /* transports.json in Resources */,
@@ -429,6 +444,7 @@
 				D0D3B6AD22CD3EC400491B60 /* TransportsPresenter.swift in Sources */,
 				D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */,
 				D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */,
+				D0FE0CDD22D0B3D2002DD808 /* TransportMarkerWindow.swift in Sources */,
 				D0EAC1BB22CDAD5600C052A2 /* Constants.swift in Sources */,
 				D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */,
 				D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */,

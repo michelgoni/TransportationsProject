@@ -97,18 +97,56 @@ struct TransportsResponse: Codable {
                 return "Bike"
             }
         }
+        
+        func getIcon() -> UIImage {
+            
+            switch self {
+            case .metro:
+                return #imageLiteral(resourceName: "metro.png")
+            case .bus:
+                return #imageLiteral(resourceName: "bus.png")
+            case .car:
+                return #imageLiteral(resourceName: "car.png")
+            case .electricCar:
+                return #imageLiteral(resourceName: "electricCar.png")
+            case .electricMotorBike:
+                return #imageLiteral(resourceName: "electricMotorbike.png")
+            case .bike:
+                return #imageLiteral(resourceName: "bike.png")
+                
+            }
+        }
+        
+        func enableAction() -> Bool {
+            switch self {
+            case .metro, .bus:
+                return false
+            default:
+                return true
+            }
+        }
     }
     
     func getTransportElement() -> TransportationElementRepresentable? {
         
-        guard let transportationType = CompanyZone(rawValue: companyZoneId.string)?.retrieveTransportationType() else {return nil}
-        guard let color = CompanyZone(rawValue: companyZoneId.string)?.retrieveColor() else {return nil}
+
+        guard let color = CompanyZone(rawValue: companyZoneId.string)?.retrieveColor(),
+        let transportationDetail = getTransportationDetail() else {return nil}
+        
+        
         return TransportationElement(coordinate: Coordinate(latitude: elementYPosition, longitude: elementXPosition),
-                                     address: address,
-                                     transportationType: transportationType,
-                                     color: color)
+                                     color: color,
+                                     transportationDetail: transportationDetail)
     }
     
+    func getTransportationDetail() -> TransportationDetailRepresentable? {
+        guard let transportationType = CompanyZone(rawValue: companyZoneId.string)?.retrieveTransportationType(),
+        let icon = CompanyZone(rawValue: companyZoneId.string)?.getIcon(),
+        let action = CompanyZone(rawValue: companyZoneId.string)?.enableAction() else {return nil}
+        return TransportationDetail(address: address, icon: icon, transportationType: transportationType, actionEnabled: action )
+    }
+    
+   
    
     
 

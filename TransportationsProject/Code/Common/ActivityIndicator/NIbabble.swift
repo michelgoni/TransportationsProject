@@ -14,6 +14,7 @@ protocol Nibbable: class {
 }
 
 extension Nibbable where Self: UIView {
+    
     func viewFromNib() {
         view = loadViewFromNib()
         view.frame = bounds

@@ -25,6 +25,7 @@ class TransportsPresenter {
     // MARK: - Private variables
     
     private var dataManager: TransportsDataManagerProtocol
+ 
     
     // MARK: - Initialization
     
