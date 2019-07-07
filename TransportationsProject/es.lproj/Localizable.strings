@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TransportationsProject
+
+  Created by Michel on 07/07/2019.
+  Copyright © 2019 Michel. All rights reserved.
+*/
+
+// Popups
+"ERROR_TITLE" = "Error";
+"INFO_TITLE" = "Info";
+"OK_BUTTON" = "Ok";
+"SELECTED_TRANSPORT_MESSAGE" = "Since \"%@\" has been selected, you could book this transporation";

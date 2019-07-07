@@ -60,6 +60,8 @@
 		D0EBBA5122D1FC580089F645 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */; };
 		D0EBBA5322D1FD1A0089F645 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA5222D1FD1A0089F645 /* TextStyles.swift */; };
 		D0EBBA5522D1FD3A0089F645 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA5422D1FD3A0089F645 /* UIFont+Extensions.swift */; };
+		D0EBC91B22D269BC003D1476 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D0EBC91D22D269BC003D1476 /* Localizable.strings */; };
+		D0EBC92022D26A27003D1476 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBC91F22D26A27003D1476 /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,6 +121,10 @@
 		D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		D0EBBA5222D1FD1A0089F645 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
 		D0EBBA5422D1FD3A0089F645 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		D0EBC91822D2696A003D1476 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		D0EBC91C22D269BC003D1476 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0EBC91E22D269C0003D1476 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D0EBC91F22D26A27003D1476 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransportationsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +156,7 @@
 				D0EBBA4922D1F8290089F645 /* UITableViewCell+Extensions.swift */,
 				D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */,
 				D0EBBA5422D1FD3A0089F645 /* UIFont+Extensions.swift */,
+				D0EBC91F22D26A27003D1476 /* String+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 				D0D3B69B22CD3E1E00491B60 /* Code */,
 				D09968F822CD315E00713B37 /* LaunchScreen.storyboard */,
 				D09968FB22CD315E00713B37 /* Info.plist */,
+				D0EBC91D22D269BC003D1476 /* Localizable.strings */,
 			);
 			path = TransportationsProject;
 			sourceTree = "<group>";
@@ -458,6 +466,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = D09968E322CD315D00713B37;
 			productRefGroup = D09968ED22CD315D00713B37 /* Products */;
@@ -476,6 +485,7 @@
 			files = (
 				D0D3B6A322CD3E8600491B60 /* Geogrotesque-Regular.otf in Resources */,
 				D0D3B6A422CD3E8600491B60 /* Geogrotesque-Bold.otf in Resources */,
+				D0EBC91B22D269BC003D1476 /* Localizable.strings in Resources */,
 				D09968FA22CD315E00713B37 /* LaunchScreen.storyboard in Resources */,
 				D0D3B6A222CD3E8600491B60 /* Geogrotesque-Medium.otf in Resources */,
 				D0EBBA4322D1F3D50089F645 /* TransportDetailTableViewCell.xib in Resources */,
@@ -575,6 +585,7 @@
 				D0EAC1BB22CDAD5600C052A2 /* Constants.swift in Sources */,
 				D0EBBA3022D1D8300089F645 /* UIViewcontroller+Extensions.swift in Sources */,
 				D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */,
+				D0EBC92022D26A27003D1476 /* String+Extensions.swift in Sources */,
 				D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */,
 				D0D3B6C622CD446700491B60 /* TransportsApi.swift in Sources */,
 				D0EAC1C222CDBC8E00C052A2 /* TransportationElement.swift in Sources */,
@@ -610,8 +621,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				D09968F922CD315E00713B37 /* Base */,
+				D0EBC91822D2696A003D1476 /* es */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		D0EBC91D22D269BC003D1476 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0EBC91C22D269BC003D1476 /* en */,
+				D0EBC91E22D269C0003D1476 /* es */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -621,6 +642,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -682,6 +704,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

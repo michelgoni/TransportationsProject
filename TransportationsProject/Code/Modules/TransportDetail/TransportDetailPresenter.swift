@@ -38,7 +38,9 @@ class TransportDetailPresenter {
     
     // MARK: - Private methods
     private func elementPressed(element: Any?) {
-        
+        if let transportationElement = element as? TransportDetailViewModel {
+            view?.showAlertTransportSelected(message: "SELECTED_TRANSPORT_MESSAGE".localizeWithFormat(arguments: [transportationElement.element.transportationType.text]))
+        }
     }
     
     private func getTransportDetailViewModel() -> ModuledModelProtocol {

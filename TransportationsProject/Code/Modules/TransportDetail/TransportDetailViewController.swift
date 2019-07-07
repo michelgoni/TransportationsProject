@@ -15,6 +15,7 @@ protocol TransportDetailViewProtocol: class {
     
     func set(presenter: TransportDetailPresenterProtocol)
     func showSections(sections: [SectionsModuleRepresentable])
+    func showAlertTransportSelected(message: String)
 }
 
 class TransportDetailViewController: UIViewController {
@@ -49,14 +50,19 @@ class TransportDetailViewController: UIViewController {
         tvDetailTransport.register(TransportDetailTableViewCell.self)
         tvDetailTransport.estimatedRowHeight = 90.0
         tvDetailTransport.rowHeight = UITableView.automaticDimension
-        
     }
-    
 }
 
 // MARK: - TransportDetailViewProtocol
 
-extension TransportDetailViewController:  TransportDetailViewProtocol {
+extension TransportDetailViewController: TransportDetailViewProtocol {
+    
+    func showAlertTransportSelected(message: String) {
+        let alert = UIAlertController(title: "INFO_TITLE".localized, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK_BUTTON".localized, style: .default))
+       
+       self.present(alert, animated: true)
+    }
     
     func set(presenter: TransportDetailPresenterProtocol) {
         self.presenter = presenter

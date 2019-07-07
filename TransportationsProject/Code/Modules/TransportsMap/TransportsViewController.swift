@@ -70,8 +70,8 @@ extension TransportsViewController:  TransportsViewProtocol {
     }
     
     func showError(message: String) {
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
+        let alert = UIAlertController(title: "ERROR_TITLE".localized, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK_BUTTON".localized, style: .default, handler: { _ in
             self.retry()
         }))
         DispatchQueue.main.async { self.present(alert, animated: true) }

@@ -10,14 +10,8 @@ import UIKit
 
 class TransportDetailViewModel: ModuledModelProtocol {
     
-    var height: CGFloat = 150
-    
-    var isClickable: Bool = true
-    
     var cellType: UITableViewCell.Type = TransportDetailTableViewCell.self
-    
     var handler: ((Any?) -> Void)?
-    
     var element: TransportationDetailRepresentable
     
     init(element: TransportationDetailRepresentable,  handler: ((Any?) -> Void)?) {

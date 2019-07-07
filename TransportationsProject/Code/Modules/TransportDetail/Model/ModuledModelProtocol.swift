@@ -11,8 +11,6 @@ import Foundation
 import UIKit
 
 protocol ModuledModelProtocol {
-    var height: CGFloat { get }
-    var isClickable: Bool { get }
     var cellType: UITableViewCell.Type { get }
     var handler: ((Any?) -> Void)? { get set }
 }
