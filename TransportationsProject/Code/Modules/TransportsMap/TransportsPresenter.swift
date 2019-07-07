@@ -14,6 +14,7 @@ protocol TransportsPresenterProtocol: class {
      * Add here your methods for communication VIEW -> PRESENTER
      */
     func getContent()
+    func markerTapped(coordinate: Coordinate)
 }
 
 class TransportsPresenter {
@@ -25,6 +26,7 @@ class TransportsPresenter {
     // MARK: - Private variables
     
     private var dataManager: TransportsDataManagerProtocol
+    private var transportElements: [TransportationElementRepresentable]?
  
     
     // MARK: - Initialization
@@ -53,6 +55,8 @@ class TransportsPresenter {
 }
 
 extension TransportsPresenter: TransportsPresenterProtocol {
+ 
+    
     func getContent() {
         
         view?.showLoadingActivityIndicator()
@@ -69,15 +73,24 @@ extension TransportsPresenter: TransportsPresenterProtocol {
                     return element.getTransportElement()
                     
                 }
-                let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
+                self.transportElements = transportElements
+                let mapPointsModel = MapPointsModel(transportElements: transportElements,
+                                                    coordinate: Coordinate.mockCoordinate)
+               
                 guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
                 self.view?.showUserLocation(mapPoints: mapPoints)
                 
             case .failure(let error):
                  self.view?.hideLoadingActivityIndicator()
                  self.view?.showError(message: error.localizedDescription)
-                debugPrint(error)
             }
         }
+    }
+    
+    func markerTapped(coordinate: Coordinate) {
+        
+         guard let transportDetail = transportElements?.first(where: { $0.coordinate.latitude == coordinate.latitude && $0.coordinate.longitude == coordinate.longitude})?.transportationDetail else {return}
+        
+        TransportDetailRouter().presentThirdHalfOfScreen(viewController: TransportDetailRouter(transportDetail: transportDetail).getPresentationController())
     }
 }

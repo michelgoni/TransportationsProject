@@ -127,6 +127,17 @@ struct TransportsResponse: Codable {
         }
     }
     
+    func getAddress() ->TextConfigurableProtocol {
+        
+        return TextStyles.detailTransportAddress(text: address)
+    }
+    
+    func getTransportationType() -> TextConfigurableProtocol {
+        return TextStyles.detailTransportTitle(text: (CompanyZone(rawValue: companyZoneId.string)?.retrieveTransportationType() ?? TextStyles.emptyTitle()))
+    }
+    
+    
+    
     func getTransportElement() -> TransportationElementRepresentable? {
         
 
@@ -140,10 +151,12 @@ struct TransportsResponse: Codable {
     }
     
     func getTransportationDetail() -> TransportationDetailRepresentable? {
-        guard let transportationType = CompanyZone(rawValue: companyZoneId.string)?.retrieveTransportationType(),
-        let icon = CompanyZone(rawValue: companyZoneId.string)?.getIcon(),
+        guard let icon = CompanyZone(rawValue: companyZoneId.string)?.getIcon(),
         let action = CompanyZone(rawValue: companyZoneId.string)?.enableAction() else {return nil}
-        return TransportationDetail(address: address, icon: icon, transportationType: transportationType, actionEnabled: action )
+        return TransportationDetail(address: getAddress(),
+                                    icon: icon,
+                                    transportationType: getTransportationType(),
+                                    actionEnabled: action )
     }
     
    

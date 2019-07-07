@@ -10,17 +10,17 @@ import UIKit
 import GoogleMaps
 
 protocol TransportationDetailRepresentable {
-    var address: String {get set}
+    var address: TextConfigurableProtocol {get set}
     var icon: UIImage {get set}
-    var transportationType: String {get set}
+    var transportationType: TextConfigurableProtocol {get set}
     var actionEnabled: Bool {get set}
 }
 
-struct TransportationDetail: TransportationDetailRepresentable{
+struct TransportationDetail: TransportationDetailRepresentable {
     
-    var address: String
+    var address: TextConfigurableProtocol
     var icon: UIImage
-    var transportationType: String
+    var transportationType: TextConfigurableProtocol
     var actionEnabled: Bool
     
     
@@ -30,7 +30,7 @@ protocol TransportationElementRepresentable {
     
     var coordinate: Coordinate {get set}
     var color: UIColor {get set}
-    
+    var transportationDetail: TransportationDetailRepresentable {get set}
     func getMarker() -> GMSMarker
 }
 
@@ -48,10 +48,6 @@ struct TransportationElement: TransportationElementRepresentable {
                                                  longitude: coordinate.longitude)
         let markerView = MarkerView(frame: CGRect(x: 0, y: 0, width: Constants.MarkerView.markerViewWidth,
                                                   height: Constants.MarkerView.markerViewHeight), color: color)
-        marker.userData = ["transportationType": transportationDetail.transportationType,
-                           "transportatioaddress": transportationDetail.address,
-                           "transportatioactionEnabled": transportationDetail.actionEnabled,
-                           "transportationIcon": transportationDetail.icon]
         marker.iconView = markerView
         
        

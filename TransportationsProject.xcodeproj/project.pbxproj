@@ -40,8 +40,27 @@
 		D0EAC1BE22CDB9F800C052A2 /* MapPointsPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */; };
 		D0EAC1C022CDBB7E00C052A2 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */; };
 		D0EAC1C222CDBC8E00C052A2 /* TransportationElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */; };
-		D0FE0CDD22D0B3D2002DD808 /* TransportMarkerWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE0CDB22D0B3D2002DD808 /* TransportMarkerWindow.swift */; };
-		D0FE0CDE22D0B3D2002DD808 /* TransportMarkerWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FE0CDC22D0B3D2002DD808 /* TransportMarkerWindow.xib */; };
+		D0EBBA2522D1D7100089F645 /* TransportDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2122D1D7100089F645 /* TransportDetailPresenter.swift */; };
+		D0EBBA2622D1D7100089F645 /* TransportDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2222D1D7100089F645 /* TransportDetailRouter.swift */; };
+		D0EBBA2722D1D7100089F645 /* TransportDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2322D1D7100089F645 /* TransportDetailViewController.swift */; };
+		D0EBBA2822D1D7100089F645 /* TransportDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2422D1D7100089F645 /* TransportDetailDataManager.swift */; };
+		D0EBBA2B22D1D7340089F645 /* TransportDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0EBBA2A22D1D7340089F645 /* TransportDetail.storyboard */; };
+		D0EBBA3022D1D8300089F645 /* UIViewcontroller+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2F22D1D8300089F645 /* UIViewcontroller+Extensions.swift */; };
+		D0EBBA3322D1D8F20089F645 /* HalfModalTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA3222D1D8F20089F645 /* HalfModalTransitioning.swift */; };
+		D0EBBA3522D1D92F0089F645 /* HalfModalInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA3422D1D92F0089F645 /* HalfModalInteractiveTransition.swift */; };
+		D0EBBA3722D1D9510089F645 /* HalfModalTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA3622D1D9510089F645 /* HalfModalTransitionAnimator.swift */; };
+		D0EBBA3922D1D9D70089F645 /* HalfModalPresetntationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA3822D1D9D70089F645 /* HalfModalPresetntationController.swift */; };
+		D0EBBA3C22D1F3160089F645 /* ModuledModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA3B22D1F3160089F645 /* ModuledModelProtocol.swift */; };
+		D0EBBA3E22D1F37F0089F645 /* TransportDetailModeuledModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA3D22D1F37F0089F645 /* TransportDetailModeuledModel.swift */; };
+		D0EBBA4222D1F3D50089F645 /* TransportDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4022D1F3D50089F645 /* TransportDetailTableViewCell.swift */; };
+		D0EBBA4322D1F3D50089F645 /* TransportDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EBBA4122D1F3D50089F645 /* TransportDetailTableViewCell.xib */; };
+		D0EBBA4522D1F6160089F645 /* TransportDetailSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4422D1F6160089F645 /* TransportDetailSection.swift */; };
+		D0EBBA4822D1F7ED0089F645 /* ElementsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4722D1F7ED0089F645 /* ElementsDataSource.swift */; };
+		D0EBBA4A22D1F8290089F645 /* UItableViewCell+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4922D1F8290089F645 /* UItableViewCell+Extensions.swift */; };
+		D0EBBA4F22D1FBBF0089F645 /* TextConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA4E22D1FBBF0089F645 /* TextConfigurable.swift */; };
+		D0EBBA5122D1FC580089F645 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */; };
+		D0EBBA5322D1FD1A0089F645 /* TextStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA5222D1FD1A0089F645 /* TextStyles.swift */; };
+		D0EBBA5522D1FD3A0089F645 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA5422D1FD3A0089F645 /* UIFont+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,8 +100,27 @@
 		D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsPosition.swift; sourceTree = "<group>"; };
 		D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationElement.swift; sourceTree = "<group>"; };
-		D0FE0CDB22D0B3D2002DD808 /* TransportMarkerWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransportMarkerWindow.swift; sourceTree = "<group>"; };
-		D0FE0CDC22D0B3D2002DD808 /* TransportMarkerWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransportMarkerWindow.xib; sourceTree = "<group>"; };
+		D0EBBA2122D1D7100089F645 /* TransportDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailPresenter.swift; sourceTree = "<group>"; };
+		D0EBBA2222D1D7100089F645 /* TransportDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailRouter.swift; sourceTree = "<group>"; };
+		D0EBBA2322D1D7100089F645 /* TransportDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailViewController.swift; sourceTree = "<group>"; };
+		D0EBBA2422D1D7100089F645 /* TransportDetailDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailDataManager.swift; sourceTree = "<group>"; };
+		D0EBBA2A22D1D7340089F645 /* TransportDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransportDetail.storyboard; sourceTree = "<group>"; };
+		D0EBBA2F22D1D8300089F645 /* UIViewcontroller+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewcontroller+Extensions.swift"; sourceTree = "<group>"; };
+		D0EBBA3222D1D8F20089F645 /* HalfModalTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalTransitioning.swift; sourceTree = "<group>"; };
+		D0EBBA3422D1D92F0089F645 /* HalfModalInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalInteractiveTransition.swift; sourceTree = "<group>"; };
+		D0EBBA3622D1D9510089F645 /* HalfModalTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalTransitionAnimator.swift; sourceTree = "<group>"; };
+		D0EBBA3822D1D9D70089F645 /* HalfModalPresetntationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalPresetntationController.swift; sourceTree = "<group>"; };
+		D0EBBA3B22D1F3160089F645 /* ModuledModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuledModelProtocol.swift; sourceTree = "<group>"; };
+		D0EBBA3D22D1F37F0089F645 /* TransportDetailModeuledModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailModeuledModel.swift; sourceTree = "<group>"; };
+		D0EBBA4022D1F3D50089F645 /* TransportDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailTableViewCell.swift; sourceTree = "<group>"; };
+		D0EBBA4122D1F3D50089F645 /* TransportDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransportDetailTableViewCell.xib; sourceTree = "<group>"; };
+		D0EBBA4422D1F6160089F645 /* TransportDetailSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailSection.swift; sourceTree = "<group>"; };
+		D0EBBA4722D1F7ED0089F645 /* ElementsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsDataSource.swift; sourceTree = "<group>"; };
+		D0EBBA4922D1F8290089F645 /* UItableViewCell+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UItableViewCell+Extensions.swift"; sourceTree = "<group>"; };
+		D0EBBA4E22D1FBBF0089F645 /* TextConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConfigurable.swift; sourceTree = "<group>"; };
+		D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
+		D0EBBA5222D1FD1A0089F645 /* TextStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyles.swift; sourceTree = "<group>"; };
+		D0EBBA5422D1FD3A0089F645 /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
 		FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TransportationsProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -111,6 +149,10 @@
 			children = (
 				2D1309DF22CE04070092484A /* SignedNumeric+Extensions.swift */,
 				2D1309E122CE28930092484A /* UIColor+Extensions.swift */,
+				D0EBBA2F22D1D8300089F645 /* UIViewcontroller+Extensions.swift */,
+				D0EBBA4922D1F8290089F645 /* UItableViewCell+Extensions.swift */,
+				D0EBBA5022D1FC580089F645 /* UILabel+Extensions.swift */,
+				D0EBBA5422D1FD3A0089F645 /* UIFont+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +297,9 @@
 		D0D3B6B722CD40A100491B60 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D0EBBA4D22D1FBA80089F645 /* Text */,
+				D0EBBA4622D1F7DD0089F645 /* DataSource */,
+				D0EBBA3122D1D8D40089F645 /* HalfModalTransitioning */,
 				D00D6DE522CE9BED004F9638 /* ActivityIndicator */,
 				2D1309DE22CE03FB0092484A /* Extensions */,
 				D00D6DE622CE9BFF004F9638 /* Environment */,
@@ -302,11 +347,71 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D0EBBA2922D1D71B0089F645 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBBA3F22D1F3BB0089F645 /* Cell */,
+				D0EBBA2A22D1D7340089F645 /* TransportDetail.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0EBBA3122D1D8D40089F645 /* HalfModalTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBBA3222D1D8F20089F645 /* HalfModalTransitioning.swift */,
+				D0EBBA3422D1D92F0089F645 /* HalfModalInteractiveTransition.swift */,
+				D0EBBA3622D1D9510089F645 /* HalfModalTransitionAnimator.swift */,
+				D0EBBA3822D1D9D70089F645 /* HalfModalPresetntationController.swift */,
+			);
+			path = HalfModalTransitioning;
+			sourceTree = "<group>";
+		};
+		D0EBBA3A22D1F22F0089F645 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBBA3B22D1F3160089F645 /* ModuledModelProtocol.swift */,
+				D0EBBA3D22D1F37F0089F645 /* TransportDetailModeuledModel.swift */,
+				D0EBBA4422D1F6160089F645 /* TransportDetailSection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0EBBA3F22D1F3BB0089F645 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBBA4022D1F3D50089F645 /* TransportDetailTableViewCell.swift */,
+				D0EBBA4122D1F3D50089F645 /* TransportDetailTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D0EBBA4622D1F7DD0089F645 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBBA4722D1F7ED0089F645 /* ElementsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		D0EBBA4D22D1FBA80089F645 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				D0EBBA4E22D1FBBF0089F645 /* TextConfigurable.swift */,
+				D0EBBA5222D1FD1A0089F645 /* TextStyles.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
 		D0FE0CDA22D0B3D2002DD808 /* TransportDetail */ = {
 			isa = PBXGroup;
 			children = (
-				D0FE0CDB22D0B3D2002DD808 /* TransportMarkerWindow.swift */,
-				D0FE0CDC22D0B3D2002DD808 /* TransportMarkerWindow.xib */,
+				D0EBBA3A22D1F22F0089F645 /* Model */,
+				D0EBBA2922D1D71B0089F645 /* View */,
+				D0EBBA2122D1D7100089F645 /* TransportDetailPresenter.swift */,
+				D0EBBA2222D1D7100089F645 /* TransportDetailRouter.swift */,
+				D0EBBA2322D1D7100089F645 /* TransportDetailViewController.swift */,
+				D0EBBA2422D1D7100089F645 /* TransportDetailDataManager.swift */,
 			);
 			path = TransportDetail;
 			sourceTree = "<group>";
@@ -375,9 +480,10 @@
 				D0D3B6A422CD3E8600491B60 /* Geogrotesque-Bold.otf in Resources */,
 				D09968FA22CD315E00713B37 /* LaunchScreen.storyboard in Resources */,
 				D0D3B6A222CD3E8600491B60 /* Geogrotesque-Medium.otf in Resources */,
+				D0EBBA4322D1F3D50089F645 /* TransportDetailTableViewCell.xib in Resources */,
 				D0D3B6B622CD3EE700491B60 /* Transports.storyboard in Resources */,
-				D0FE0CDE22D0B3D2002DD808 /* TransportMarkerWindow.xib in Resources */,
 				D09968F722CD315E00713B37 /* Assets.xcassets in Resources */,
+				D0EBBA2B22D1D7340089F645 /* TransportDetail.storyboard in Resources */,
 				D00D6DE422CE9A18004F9638 /* ActivityIndicatorScreen.xib in Resources */,
 				D0D3B69D22CD3E6400491B60 /* transports.json in Resources */,
 			);
@@ -437,15 +543,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EBBA2822D1D7100089F645 /* TransportDetailDataManager.swift in Sources */,
 				D0D3B6C122CD432D00491B60 /* ApiError.swift in Sources */,
+				D0EBBA3C22D1F3160089F645 /* ModuledModelProtocol.swift in Sources */,
+				D0EBBA4522D1F6160089F645 /* TransportDetailSection.swift in Sources */,
 				D0D3B6B022CD3EC400491B60 /* TransportsApiClient.swift in Sources */,
 				D0EAC1BE22CDB9F800C052A2 /* MapPointsPosition.swift in Sources */,
 				D0D3B6BD22CD421A00491B60 /* Endpoint.swift in Sources */,
 				D0D3B6AD22CD3EC400491B60 /* TransportsPresenter.swift in Sources */,
 				D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */,
+				D0EBBA4A22D1F8290089F645 /* UItableViewCell+Extensions.swift in Sources */,
+				D0EBBA5522D1FD3A0089F645 /* UIFont+Extensions.swift in Sources */,
 				D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */,
-				D0FE0CDD22D0B3D2002DD808 /* TransportMarkerWindow.swift in Sources */,
+				D0EBBA2622D1D7100089F645 /* TransportDetailRouter.swift in Sources */,
+				D0EBBA4822D1F7ED0089F645 /* ElementsDataSource.swift in Sources */,
 				D0EAC1BB22CDAD5600C052A2 /* Constants.swift in Sources */,
+				D0EBBA3022D1D8300089F645 /* UIViewcontroller+Extensions.swift in Sources */,
 				D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */,
 				D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */,
 				D0D3B6C622CD446700491B60 /* TransportsApi.swift in Sources */,
@@ -454,14 +567,25 @@
 				2D1309E222CE28930092484A /* UIColor+Extensions.swift in Sources */,
 				D0D3B6BF22CD425400491B60 /* TransportApiCase.swift in Sources */,
 				2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */,
+				D0EBBA3922D1D9D70089F645 /* HalfModalPresetntationController.swift in Sources */,
+				D0EBBA5322D1FD1A0089F645 /* TextStyles.swift in Sources */,
 				D00D6DE922CE9D0F004F9638 /* NIbabble.swift in Sources */,
+				D0EBBA5122D1FC580089F645 /* UILabel+Extensions.swift in Sources */,
 				D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */,
+				D0EBBA3522D1D92F0089F645 /* HalfModalInteractiveTransition.swift in Sources */,
 				2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */,
+				D0EBBA3E22D1F37F0089F645 /* TransportDetailModeuledModel.swift in Sources */,
+				D0EBBA3322D1D8F20089F645 /* HalfModalTransitioning.swift in Sources */,
 				D0D3B6AE22CD3EC400491B60 /* TransportsRouter.swift in Sources */,
+				D0EBBA4222D1F3D50089F645 /* TransportDetailTableViewCell.swift in Sources */,
 				D09968F022CD315D00713B37 /* AppDelegate.swift in Sources */,
 				D0D3B6C922CD451D00491B60 /* TransportsResponse.swift in Sources */,
 				D0EAC1C022CDBB7E00C052A2 /* Coordinate.swift in Sources */,
+				D0EBBA2722D1D7100089F645 /* TransportDetailViewController.swift in Sources */,
+				D0EBBA4F22D1FBBF0089F645 /* TextConfigurable.swift in Sources */,
 				D0D3B6C322CD435200491B60 /* ApiClient.swift in Sources */,
+				D0EBBA3722D1D9510089F645 /* HalfModalTransitionAnimator.swift in Sources */,
+				D0EBBA2522D1D7100089F645 /* TransportDetailPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

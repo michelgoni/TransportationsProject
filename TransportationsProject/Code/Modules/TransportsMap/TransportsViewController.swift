@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 
+
 protocol RetryableProtocol {
     func retry()
 }
@@ -58,8 +59,7 @@ class TransportsViewController: UIViewController {
 
 extension TransportsViewController:  TransportsViewProtocol {
     
-    
-    
+
     func showLoadingActivityIndicator() {
         loadingScreen.show(view: view)
         
@@ -90,6 +90,7 @@ extension TransportsViewController:  TransportsViewProtocol {
     
 }
 
+
 extension TransportsViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
@@ -97,8 +98,12 @@ extension TransportsViewController: GMSMapViewDelegate {
     }
     
     
-    func mapView(_ mapView: GMSMapView, didChange position: GMSCameraPosition) {
-        debugPrint(position)
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        let coordinate = Coordinate(latitude: marker.position.latitude,
+                                    longitude: marker.position.longitude)
+        presenter?.markerTapped(coordinate: coordinate)
+        
+        return false
     }
 }
 
