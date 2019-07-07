@@ -13,7 +13,7 @@ struct TextStyles {
    
     
     static func detailTransportTitle(text: String) -> TextConfigurable {
-        return TextConfigurable(text: text, font: UIFont.geogrotesqueRegular20(), color: .black, alignment: .center)
+        return TextConfigurable(text: text, font: UIFont.geogrotesqueRegular24(), color: .black, alignment: .center)
     }
     
     static func detailTransportAddress(text: String) -> TextConfigurable {

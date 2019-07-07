@@ -14,7 +14,6 @@ protocol ConfigurableModuledModel {
 
 class TransportDetailTableViewCell: UITableViewCell, ConfigurableModuledModel {
   
-
     @IBOutlet var lbDetailTransportTitle: UILabel!
     @IBOutlet var imgLbDetailTransport: UIImageView!
     @IBOutlet var lbAddressDetailTransport: UILabel!
@@ -32,11 +31,6 @@ class TransportDetailTableViewCell: UITableViewCell, ConfigurableModuledModel {
     
     // MARK: - Private methods
     private func configureImg(detailTransportImage: UIImage) {
-        imgLbDetailTransport.layer.cornerRadius = imgLbDetailTransport.frame.width / 2
-        imgLbDetailTransport.layer.masksToBounds = true
-        imgLbDetailTransport.clipsToBounds = true
-        imgLbDetailTransport.layer.borderWidth = 0.6
-        imgLbDetailTransport.layer.borderColor = UIColor.black.cgColor
         imgLbDetailTransport.image = detailTransportImage
     }
     
