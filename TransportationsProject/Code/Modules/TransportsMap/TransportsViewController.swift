@@ -9,7 +9,6 @@
 import UIKit
 import GoogleMaps
 
-
 protocol RetryableProtocol {
     func retry()
 }
@@ -24,6 +23,7 @@ protocol TransportsViewProtocol: class {
     func hideLoadingActivityIndicator()
     func showError(message: String)
     func showUserLocation(mapPoints: MapPointsPosition)
+    func showTitle(title: String)
 }
 
 class TransportsViewController: UIViewController {
@@ -41,12 +41,9 @@ class TransportsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.getContent()
+        presenter?.getTitle()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
+
     // MARK: - Actions
     
     // MARK: - Overrides
@@ -58,8 +55,7 @@ class TransportsViewController: UIViewController {
 // MARK: - TransportsViewProtocol
 
 extension TransportsViewController:  TransportsViewProtocol {
-    
-
+  
     func showLoadingActivityIndicator() {
         loadingScreen.show(view: view)
         
@@ -75,7 +71,7 @@ extension TransportsViewController:  TransportsViewProtocol {
     
     func showError(message: String) {
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
             self.retry()
         }))
         DispatchQueue.main.async { self.present(alert, animated: true) }
@@ -88,15 +84,16 @@ extension TransportsViewController:  TransportsViewProtocol {
         mapPoints.markers.forEach({$0.map = mapView})
     }
     
+    func showTitle(title: String) {
+        self.title = title
+    }
 }
-
 
 extension TransportsViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap overlay: GMSOverlay) {
         
     }
-    
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         let coordinate = Coordinate(latitude: marker.position.latitude,
@@ -112,5 +109,3 @@ extension TransportsViewController: RetryableProtocol {
         presenter?.getContent()
     }
 }
-
-

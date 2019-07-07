@@ -14,7 +14,6 @@ struct Environment {
     private static let nameFileEnvironment = "Info"
     private static let isMockKey = "isMock"
     
-    
     private var plistEnvironment : [String: Any] = [:]
     
     // MARK: - Init

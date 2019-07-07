@@ -6,6 +6,7 @@
 //  Copyright © 2019 Michel. All rights reserved.
 //
 
+// swiftlint:disable force_cast
 import Foundation
 
 protocol ApiClient {

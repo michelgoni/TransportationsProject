@@ -16,7 +16,6 @@ protocol TextConfigurableProtocol {
     
 }
 
-
 struct TextConfigurable: TextConfigurableProtocol {
     var text: String
     var font: UIFont
@@ -24,6 +23,3 @@ struct TextConfigurable: TextConfigurableProtocol {
     var alignment: NSTextAlignment
     
 }
-
-
-

@@ -17,8 +17,8 @@ struct Constants {
     }
     
     struct MarkerView {
-        static let markerViewWidth: CGFloat = 15.0
-        static let markerViewHeight: CGFloat = 15.0
+        static let markerViewWidth: CGFloat = 35.0
+        static let markerViewHeight: CGFloat = 35.0
     }
     
     struct GoogleMaps {

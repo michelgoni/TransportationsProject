@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class TransportDetailViewModel: ModuledModelProtocol {
     
     var height: CGFloat = 150
@@ -25,7 +24,5 @@ class TransportDetailViewModel: ModuledModelProtocol {
         self.element = element
         self.handler = handler
     }
-    
-    
     
 }

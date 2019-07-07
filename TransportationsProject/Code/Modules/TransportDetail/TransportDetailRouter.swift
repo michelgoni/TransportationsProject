@@ -39,16 +39,13 @@ class TransportDetailRouter {
         self.transportDetail = transportDetail
     }
     
-  
-    
     // MARK: - Presentation Methods
     
     func present(viewController: UIViewController) {
         UIViewController.getCurrentViewController()?.present(viewController, animated: true, completion: nil)
     }
 
-   
-    func presentThirdHalfOfScreen(viewController: UIViewController, modalHeight: ModalHeight = .third) {
+    func presentThirdHalfOfScreen(viewController: UIViewController, modalHeight: ModalHeight = .custom(value:  UIScreen.main.bounds.height / 4)) {
         
         if let current = UIViewController.getCurrentViewController() {
             halfModalTransitioning = HalfModalTransitioning(viewController: current,

@@ -11,18 +11,19 @@ import UIKit
 
 class MarkerView: UIView {
    
-    var color: UIColor
+    var image: UIImage
     
-    init(frame: CGRect, color: UIColor) {
-        self.color = color
+    init(frame: CGRect, image: UIImage) {
+        
+        self.image = image
         super.init(frame: frame)
         setupViews()
     }
     
     func setupViews() {
-        let img = color.image(CGSize(width: frame.width, height: frame.height))
-        let imgView = UIImageView(image: img)
-        imgView.frame = CGRect(x: 0, y: 0, width: img.size.width, height: img.size.height)
+        //let img = color.image(CGSize(width: frame.width, height: frame.height))
+        let imgView = UIImageView(image: image)
+        imgView.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
         imgView.layer.cornerRadius = imgView.frame.width / 2
         imgView.layer.borderColor = UIColor.black.cgColor
         imgView.layer.borderWidth = 1

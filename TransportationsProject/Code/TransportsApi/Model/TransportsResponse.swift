@@ -14,7 +14,6 @@ typealias TransportResponse = [TransportsResponse]
 
 struct TransportsResponse: Codable {
     
-
     let address: String
     let elementXPosition: Double
     let elementYPosition: Double
@@ -52,7 +51,6 @@ struct TransportsResponse: Codable {
         case bikesAvailable
     }
     
-    
     enum CompanyZone: String {
         case metro = "378"
         case bus = "382"
@@ -60,7 +58,6 @@ struct TransportsResponse: Codable {
         case electricCar = "467"
         case electricMotorBike = "473"
         case bike = "412"
-        
         
         func retrieveColor() -> UIColor {
             
@@ -127,7 +124,7 @@ struct TransportsResponse: Codable {
         }
     }
     
-    func getAddress() ->TextConfigurableProtocol {
+    func getAddress() -> TextConfigurableProtocol {
         
         return TextStyles.detailTransportAddress(text: address)
     }
@@ -136,17 +133,10 @@ struct TransportsResponse: Codable {
         return TextStyles.detailTransportTitle(text: (CompanyZone(rawValue: companyZoneId.string)?.retrieveTransportationType() ?? TextStyles.emptyTitle()))
     }
     
-    
-    
     func getTransportElement() -> TransportationElementRepresentable? {
-        
-
-        guard let color = CompanyZone(rawValue: companyZoneId.string)?.retrieveColor(),
-        let transportationDetail = getTransportationDetail() else {return nil}
-        
+        guard let transportationDetail = getTransportationDetail() else {return nil}
         
         return TransportationElement(coordinate: Coordinate(latitude: elementYPosition, longitude: elementXPosition),
-                                     color: color,
                                      transportationDetail: transportationDetail)
     }
     
@@ -158,12 +148,5 @@ struct TransportsResponse: Codable {
                                     transportationType: getTransportationType(),
                                     actionEnabled: action )
     }
-    
-   
-   
-    
-
-    
-  
 }
 

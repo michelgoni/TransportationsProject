@@ -10,8 +10,6 @@ import UIKit
 
 struct TextStyles {
     
-   
-    
     static func detailTransportTitle(text: String) -> TextConfigurable {
         return TextConfigurable(text: text, font: UIFont.geogrotesqueRegular24(), color: .black, alignment: .center)
     }

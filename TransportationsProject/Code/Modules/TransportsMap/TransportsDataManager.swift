@@ -13,6 +13,7 @@ protocol TransportsDataManagerProtocol: class {
      * Add here your methods for communication PRESENTER -> DATA_MANAGER
      */
      func getTransports( completion: @escaping (Result<[TransportsResponse]?, ApiError>) -> Void)
+    func getTitle() -> String
 }
 
 class TransportsDataManager {
@@ -34,6 +35,10 @@ extension TransportsDataManager: TransportsDataManagerProtocol {
         apiClient.getTransports(firstQueryitem: "38.711046,-9.160096", secondQueryItem: "38.739429,-9.137115", completion: completion)
     }
     
+    func getTitle() -> String {
+        
+        return "Lisbon transport"
+    }
     
 }
 

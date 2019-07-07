@@ -14,6 +14,7 @@ protocol TransportsPresenterProtocol: class {
      * Add here your methods for communication VIEW -> PRESENTER
      */
     func getContent()
+    func getTitle()
     func markerTapped(coordinate: Coordinate)
 }
 
@@ -28,7 +29,6 @@ class TransportsPresenter {
     private var dataManager: TransportsDataManagerProtocol
     private var transportElements: [TransportationElementRepresentable]?
  
-    
     // MARK: - Initialization
     
     init(view:TransportsViewProtocol,
@@ -37,12 +37,12 @@ class TransportsPresenter {
         self.dataManager = dataManager
     }
     
-    //MARK: - Private methods
+    // MARK: - Private methods
     private func buildMapPoints(mapPoints: MapPointsModel) -> MapPointsPosition? {
         
         let cameraPosition = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: mapPoints.coordinate.latitude,
                                                                               longitude: mapPoints.coordinate.longitude),
-                                               zoom: 15,
+                                               zoom: 17,
                                                bearing: 0,
                                                viewingAngle: 0)
 
@@ -55,8 +55,7 @@ class TransportsPresenter {
 }
 
 extension TransportsPresenter: TransportsPresenterProtocol {
- 
-    
+  
     func getContent() {
         
         view?.showLoadingActivityIndicator()
@@ -68,7 +67,7 @@ extension TransportsPresenter: TransportsPresenterProtocol {
             case .success(let transports):
                 guard let transports = transports else {return}
                 
-                let transportElements = transports.compactMap{ element -> TransportationElementRepresentable? in
+                let transportElements = transports.compactMap { element -> TransportationElementRepresentable? in
                     
                     return element.getTransportElement()
                     
@@ -86,10 +85,17 @@ extension TransportsPresenter: TransportsPresenterProtocol {
             }
         }
     }
+
+    func getTitle() {
+        view?.showTitle(title: dataManager.getTitle())
+    }
     
     func markerTapped(coordinate: Coordinate) {
         
-         guard let transportDetail = transportElements?.first(where: { $0.coordinate.latitude == coordinate.latitude && $0.coordinate.longitude == coordinate.longitude})?.transportationDetail else {return}
+         guard let transportDetail = transportElements?
+            .first(where: { $0.coordinate.latitude == coordinate.latitude
+            && $0.coordinate.longitude == coordinate.longitude})?
+            .transportationDetail else {return}
         
         TransportDetailRouter().presentThirdHalfOfScreen(viewController: TransportDetailRouter(transportDetail: transportDetail).getPresentationController())
     }

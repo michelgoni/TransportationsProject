@@ -428,6 +428,7 @@
 				D09968E922CD315D00713B37 /* Frameworks */,
 				D09968EA22CD315D00713B37 /* Resources */,
 				78EA23B40EA97B26F2FA1D72 /* [CP] Copy Pods Resources */,
+				D0EBBA5622D20A590089F645 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -535,6 +536,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D0EBBA5622D20A590089F645 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftlint autocorrect\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

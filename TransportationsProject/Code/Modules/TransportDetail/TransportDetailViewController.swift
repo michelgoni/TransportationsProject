@@ -58,8 +58,6 @@ class TransportDetailViewController: UIViewController {
 
 extension TransportDetailViewController:  TransportDetailViewProtocol {
     
-    
-    
     func set(presenter: TransportDetailPresenterProtocol) {
         self.presenter = presenter
     }

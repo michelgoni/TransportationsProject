@@ -10,7 +10,6 @@ import UIKit
 
 extension UILabel {
     
-    
     func configure(textConfigurable: TextConfigurableProtocol?) {
         if let textConfigurable = textConfigurable {
             text = textConfigurable.text

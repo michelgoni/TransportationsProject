@@ -11,7 +11,6 @@ import Foundation
 class  TransportDetailSection: SectionsModuleRepresentable {
     var elements: [ModuledModelProtocol]
     
-    
     init(elements: [ModuledModelProtocol]) {
         self.elements = elements
     }

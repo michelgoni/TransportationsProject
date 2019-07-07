@@ -18,7 +18,7 @@ class TransportDetailTableViewCell: UITableViewCell, ConfigurableModuledModel {
     @IBOutlet var imgLbDetailTransport: UIImageView!
     @IBOutlet var lbAddressDetailTransport: UILabel!
     
-    // MARK: -ConfigurableModuledModel
+    // MARK: - ConfigurableModuledModel
     func configure(element: ModuledModelProtocol) {
         
         if let detailTransportElement = element as? TransportDetailViewModel {
@@ -27,7 +27,6 @@ class TransportDetailTableViewCell: UITableViewCell, ConfigurableModuledModel {
             configureDetailTransportAddress(detailTransportAddress: detailTransportElement.element.address)
         }
     }
-    
     
     // MARK: - Private methods
     private func configureImg(detailTransportImage: UIImage) {
@@ -41,6 +40,4 @@ class TransportDetailTableViewCell: UITableViewCell, ConfigurableModuledModel {
     private func configureDetailTransportAddress(detailTransportAddress: TextConfigurableProtocol) {
         lbAddressDetailTransport.configure(textConfigurable: detailTransportAddress)
     }
-    
-    
 }

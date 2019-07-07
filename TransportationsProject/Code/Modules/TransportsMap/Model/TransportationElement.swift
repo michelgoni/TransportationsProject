@@ -23,13 +23,11 @@ struct TransportationDetail: TransportationDetailRepresentable {
     var transportationType: TextConfigurableProtocol
     var actionEnabled: Bool
     
-    
 }
 
 protocol TransportationElementRepresentable {
     
     var coordinate: Coordinate {get set}
-    var color: UIColor {get set}
     var transportationDetail: TransportationDetailRepresentable {get set}
     func getMarker() -> GMSMarker
 }
@@ -37,9 +35,7 @@ protocol TransportationElementRepresentable {
 struct TransportationElement: TransportationElementRepresentable {
     
     var coordinate: Coordinate
-    var color: UIColor
     var transportationDetail: TransportationDetailRepresentable
-    
     
     func getMarker() -> GMSMarker {
         
@@ -47,14 +43,9 @@ struct TransportationElement: TransportationElementRepresentable {
         marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude,
                                                  longitude: coordinate.longitude)
         let markerView = MarkerView(frame: CGRect(x: 0, y: 0, width: Constants.MarkerView.markerViewWidth,
-                                                  height: Constants.MarkerView.markerViewHeight), color: color)
+                                                  height: Constants.MarkerView.markerViewHeight),
+                                    image: transportationDetail.icon)
         marker.iconView = markerView
-        
-       
-       
-       
         return marker
     }
-    
-    
 }

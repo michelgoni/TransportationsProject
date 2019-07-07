@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 class ActivityIndicatorScreen: UIView, Nibbable {
     
     @IBOutlet var loadingActivityIndicator: UIActivityIndicatorView!

@@ -17,7 +17,6 @@ protocol ModuledModelProtocol {
     var handler: ((Any?) -> Void)? { get set }
 }
 
-
 protocol SectionsModuleRepresentable {
     var elements: [ModuledModelProtocol] { get set }
 }

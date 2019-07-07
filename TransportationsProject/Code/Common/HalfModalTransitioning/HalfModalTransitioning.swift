@@ -29,7 +29,6 @@ public class HalfModalTransitioning: NSObject, UIViewControllerTransitioningDele
         super.init()
     }
     
-    
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return HalfModalTransitionAnimator(type: .dismiss)
     }

@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 public enum ModalScaleState {
     case adjustedOnce
     case normal

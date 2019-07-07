@@ -21,7 +21,7 @@ extension UITableViewCell: Reusable {}
 
 extension UITableView {
     
-    func register<T: UITableViewCell>(_ :T.Type)  {
+    func register<T: UITableViewCell>(_ :T.Type) {
         
         register(UINib(nibName: T.reuseIdentifier, bundle: nil), forCellReuseIdentifier: T.reuseIdentifier)
     }

@@ -6,6 +6,7 @@
 //  Copyright © 2016 martinnormark. All rights reserved.
 //
 
+// swiftlint:disable unused_setter_value
 import UIKit
 
 class HalfModalInteractiveTransition: UIPercentDrivenInteractiveTransition {

@@ -37,14 +37,14 @@ class TransportDetailPresenter {
     }
     
     // MARK: - Private methods
-    private func elementPressed(elemnt: Any?) {
+    private func elementPressed(element: Any?) {
         
     }
     
     private func getTransportDetailViewModel() -> ModuledModelProtocol {
         
         return TransportDetailViewModel(element: transportDetail,
-                                        handler: self.elementPressed)
+                                        handler: transportDetail.actionEnabled ? self.elementPressed: nil)
     }
     
     private func getTransportDetailSection(modules: [ModuledModelProtocol]) -> SectionsModuleRepresentable {
@@ -62,7 +62,6 @@ extension TransportDetailPresenter: TransportDetailPresenterProtocol {
         sections.append(getTransportDetailSection(modules: modules))
         view?.showSections(sections: sections)
     }
-    
     
 }
 
