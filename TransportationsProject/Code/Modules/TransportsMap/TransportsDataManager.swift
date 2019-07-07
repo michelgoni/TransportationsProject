@@ -32,7 +32,9 @@ class TransportsDataManager {
 
 extension TransportsDataManager: TransportsDataManagerProtocol {
     func getTransports(completion: @escaping (Result<[TransportsResponse]?, ApiError>) -> Void) {
-        apiClient.getTransports(firstQueryitem: "38.711046,-9.160096", secondQueryItem: "38.739429,-9.137115", completion: completion)
+        
+        apiClient.getTransports(firstQueryitem: Constants.MockQueryitems.firstQueryItem,
+                                secondQueryItem: Constants.MockQueryitems.secondQueryItem, completion: completion)
     }
     
     func getTitle() -> String {

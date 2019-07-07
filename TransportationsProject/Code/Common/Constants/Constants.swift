@@ -11,6 +11,11 @@ import UIKit
 
 struct Constants {
     
+    struct MockQueryitems {
+        static let firstQueryItem = "38.711046,-9.160096"
+        static let secondQueryItem = "38.739429,-9.137115"
+    }
+    
     struct MockCoordinates {
         static let mockLatitude: Double = 38.71395031
         static let mockLongitude: Double = -9.13916688
