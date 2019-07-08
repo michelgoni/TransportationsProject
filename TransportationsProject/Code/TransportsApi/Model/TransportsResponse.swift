@@ -63,17 +63,17 @@ struct TransportsResponse: Codable {
             
             switch self {
             case .metro:
-                return "Metro"
+                return "METRO".localized
             case .bus:
-                return "Bus"
+                return "BUS".localized
             case .car:
-                return "Car"
+                return "CAR".localized
             case .electricCar:
-                return "Electric car"
+                return "ELECTRIC_CAR".localized
             case .electricMotorBike:
-                return "Electric motorbike"
+                return "ELECTRIC_MOTORBIKE".localized
             case .bike:
-                return "Bike"
+                return "BIKE".localized
             }
         }
         

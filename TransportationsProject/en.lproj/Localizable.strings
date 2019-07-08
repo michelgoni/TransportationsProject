@@ -10,3 +10,15 @@
 "INFO_TITLE" = "Info";
 "OK_BUTTON" = "Ok";
 "SELECTED_TRANSPORT_MESSAGE" = "Since \"%@\" has been selected, you could book this transporation";
+
+// Title
+"TRANSPORT_VC_TITLE" = "Lisbon Transports";
+
+//Transports
+"METRO" = "Metro";
+"BUS" = "Bus";
+"CAR" = "Car";
+"ELECTRIC_CAR" = "Electric car";
+"ELECTRIC_MOTORBIKE" = "Electric motorbike";
+"BIKE" = "Bike";
+
