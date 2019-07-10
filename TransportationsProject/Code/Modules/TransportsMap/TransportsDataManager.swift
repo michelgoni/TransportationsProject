@@ -39,7 +39,7 @@ extension TransportsDataManager: TransportsDataManagerProtocol {
     
     func getTitle() -> String {
         
-        return "Lisbon transport"
+        return "TRANSPORT_VC_TITLE".localized
     }
     
 }

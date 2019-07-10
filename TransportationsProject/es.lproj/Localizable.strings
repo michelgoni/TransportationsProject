@@ -10,4 +10,15 @@
 "ERROR_TITLE" = "Error";
 "INFO_TITLE" = "Info";
 "OK_BUTTON" = "Ok";
-"SELECTED_TRANSPORT_MESSAGE" = "Since \"%@\" has been selected, you could book this transporation";
+"SELECTED_TRANSPORT_MESSAGE" = "El tipo de transporte \"%@\" se puede reservar.";
+
+// Title
+"TRANSPORT_VC_TITLE" =  "Transportes de Lisboa";
+
+//Transports
+"METRO" = "Metro";
+"BUS" = "Bus";
+"CAR" = "Coche";
+"ELECTRIC_CAR" = "Coche eléctrico";
+"ELECTRIC_MOTORBIKE" = "Moto eléctrica";
+"BIKE" = "Bicicleta";
