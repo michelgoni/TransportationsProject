@@ -11,9 +11,7 @@ import Foundation
 protocol Endpoint {
     var base: String { get }
     var path: String { get }
-    var firstQueryElement: URLQueryItem {get}
-    var secondQueryElement: URLQueryItem {get}
-    
+    var queryItems: [URLQueryItem] {get}
 }
 
 extension Endpoint {
@@ -23,7 +21,7 @@ extension Endpoint {
             fatalError("Sorry, but there must be a valid endPoint")
         }
         components.path = path
-        components.queryItems = [firstQueryElement, secondQueryElement]
+        components.queryItems = queryItems
         return components
     }
     

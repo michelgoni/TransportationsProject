@@ -14,21 +14,13 @@ enum TransportsApiCase {
 }
 
 extension TransportsApiCase: Endpoint {
-    var firstQueryElement: URLQueryItem {
-        
+    var queryItems: [URLQueryItem] {
+       
         switch self {
         case .listTransports(let queryElement):
-            
-            return URLQueryItem(name: "upperRightLatLon", value: queryElement.firstQueryElement)
-        }
-    }
-    
-    var secondQueryElement: URLQueryItem {
-        
-        switch self {
-        case .listTransports(let queryElement):
-            
-            return URLQueryItem(name: "lowerLeftLatLon", value: queryElement.secondQueryElement)
+            return [URLQueryItem(name: "upperRightLatLon", value: queryElement.firstQueryElement),
+                    URLQueryItem(name: "lowerLeftLatLon", value: queryElement.secondQueryElement)]
+       
         }
     }
     

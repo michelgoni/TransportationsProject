@@ -20,11 +20,14 @@ class TransportsApi {
 }
 
 extension TransportsApi: ApiClient {
+    
+    var printsDebug: Bool {
+        return true
+    }
     func getTransportsList(from transportsApiCase: TransportsApiCase,
                            completion: @escaping (Result<TransportResponse?, ApiError>) -> Void) {
         let endpoint = transportsApiCase
         let request = endpoint.request
-        debugPrint(request)
         fetch(with: request, decode: { json -> TransportResponse? in
             guard let result = json as? TransportResponse else { return  nil }
             return result

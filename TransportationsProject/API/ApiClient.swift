@@ -12,12 +12,38 @@ import Foundation
 protocol ApiClient {
     
     var session: URLSession {get}
+    var printsDebug: Bool {get}
     func fetch<T: Codable>(with request: URLRequest, decode: @escaping (Codable) -> T?, completion: @escaping (Result<T, ApiError>) -> Void)
 }
 
 extension ApiClient {
     
     typealias JSONTaskCompletion = (Decodable?, ApiError?) -> Void
+    
+    func fetch<T: Codable>(with request: URLRequest, decode: @escaping (Codable) -> T?, completion: @escaping (Result<T, ApiError>) -> Void) {
+        
+        let task = decodingTask(with: request, decodingType: T.self) { (json , error) in
+            if self.printsDebug {
+                debugPrint(request)
+            }
+            DispatchQueue.main.async {
+                guard let json = json else {
+                    if let error = error {
+                        completion(Result.failure(error))
+                    } else {
+                        completion(Result.failure(.invalidData))
+                    }
+                    return
+                }
+                if let value = decode(json as! Codable) {
+                    completion(.success(value))
+                } else {
+                    completion(.failure(.jsonParsingFailure))
+                }
+            }
+        }
+        task.resume()
+    }
     
     func decodingTask<T: Codable>(with request: URLRequest, decodingType: T.Type, completionHandler completion: @escaping JSONTaskCompletion) -> URLSessionDataTask {
         
@@ -47,26 +73,4 @@ extension ApiClient {
         return task
     }
     
-    func fetch<T: Codable>(with request: URLRequest, decode: @escaping (Codable) -> T?, completion: @escaping (Result<T, ApiError>) -> Void) {
-        
-        let task = decodingTask(with: request, decodingType: T.self) { (json , error) in
-            
-            DispatchQueue.main.async {
-                guard let json = json else {
-                    if let error = error {
-                        completion(Result.failure(error))
-                    } else {
-                        completion(Result.failure(.invalidData))
-                    }
-                    return
-                }
-                if let value = decode(json as! Codable) {
-                    completion(.success(value))
-                } else {
-                    completion(.failure(.jsonParsingFailure))
-                }
-            }
-        }
-        task.resume()
-    }
 }

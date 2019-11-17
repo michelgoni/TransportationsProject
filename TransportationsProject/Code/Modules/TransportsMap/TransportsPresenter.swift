@@ -73,8 +73,7 @@ extension TransportsPresenter: TransportsPresenterProtocol {
                     
                 }
                 self.transportElements = transportElements
-                let mapPointsModel = MapPointsModel(transportElements: transportElements,
-                                                    coordinate: Coordinate.mockCoordinate)
+                let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
                 
                 guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
                 self.view?.showUserLocation(mapPoints: mapPoints)
