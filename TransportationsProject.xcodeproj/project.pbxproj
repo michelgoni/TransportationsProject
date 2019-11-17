@@ -10,6 +10,9 @@
 		1F1F47546097C3F6959D030E /* Pods_TransportationsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */; };
 		2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309DF22CE04070092484A /* SignedNumeric+Extensions.swift */; };
 		2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309E322CE2BB10092484A /* MapPointsModel.swift */; };
+		D006AC4D2381CD5F006F7D5E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006AC4C2381CD5F006F7D5E /* BaseViewController.swift */; };
+		D006AC502381CFF4006F7D5E /* AlertActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006AC4F2381CFF4006F7D5E /* AlertActions.swift */; };
+		D006AC522381D024006F7D5E /* TransportAlertActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006AC512381D024006F7D5E /* TransportAlertActions.swift */; };
 		D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D6DDF22CE915C004F9638 /* MarkerView.swift */; };
 		D00D6DE222CE99DA004F9638 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00D6DE122CE99DA004F9638 /* ActivityIndicator.swift */; };
 		D00D6DE422CE9A18004F9638 /* ActivityIndicatorScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D00D6DE322CE9A18004F9638 /* ActivityIndicatorScreen.xib */; };
@@ -69,6 +72,9 @@
 		2D1309E322CE2BB10092484A /* MapPointsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsModel.swift; sourceTree = "<group>"; };
 		897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.release.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.release.xcconfig"; sourceTree = "<group>"; };
 		99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.debug.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.debug.xcconfig"; sourceTree = "<group>"; };
+		D006AC4C2381CD5F006F7D5E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D006AC4F2381CFF4006F7D5E /* AlertActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActions.swift; sourceTree = "<group>"; };
+		D006AC512381D024006F7D5E /* TransportAlertActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportAlertActions.swift; sourceTree = "<group>"; };
 		D00D6DDF22CE915C004F9638 /* MarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerView.swift; sourceTree = "<group>"; };
 		D00D6DE122CE99DA004F9638 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		D00D6DE322CE9A18004F9638 /* ActivityIndicatorScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityIndicatorScreen.xib; sourceTree = "<group>"; };
@@ -168,6 +174,23 @@
 				897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		D006AC4B2381CD4B006F7D5E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				D006AC4C2381CD5F006F7D5E /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		D006AC4E2381CFDF006F7D5E /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				D006AC4F2381CFF4006F7D5E /* AlertActions.swift */,
+				D006AC512381D024006F7D5E /* TransportAlertActions.swift */,
+			);
+			path = Alerts;
 			sourceTree = "<group>";
 		};
 		D00D6DE522CE9BED004F9638 /* ActivityIndicator */ = {
@@ -302,6 +325,8 @@
 		D0D3B6B722CD40A100491B60 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D006AC4E2381CFDF006F7D5E /* Alerts */,
+				D006AC4B2381CD4B006F7D5E /* Base */,
 				D0EBBA4D22D1FBA80089F645 /* Text */,
 				D0EBBA4622D1F7DD0089F645 /* DataSource */,
 				D0EBBA3122D1D8D40089F645 /* HalfModalTransitioning */,
@@ -581,6 +606,7 @@
 				D0EBBA5522D1FD3A0089F645 /* UIFont+Extensions.swift in Sources */,
 				D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */,
 				D0EBBA2622D1D7100089F645 /* TransportDetailRouter.swift in Sources */,
+				D006AC4D2381CD5F006F7D5E /* BaseViewController.swift in Sources */,
 				D0EBBA4822D1F7ED0089F645 /* ElementsDataSource.swift in Sources */,
 				D0EAC1BB22CDAD5600C052A2 /* Constants.swift in Sources */,
 				D0EBBA3022D1D8300089F645 /* UIViewcontroller+Extensions.swift in Sources */,
@@ -594,6 +620,7 @@
 				2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */,
 				D0EBBA3922D1D9D70089F645 /* HalfModalPresetntationController.swift in Sources */,
 				D0EBBA5322D1FD1A0089F645 /* TextStyles.swift in Sources */,
+				D006AC502381CFF4006F7D5E /* AlertActions.swift in Sources */,
 				D00D6DE922CE9D0F004F9638 /* NIbabble.swift in Sources */,
 				D0EBBA5122D1FC580089F645 /* UILabel+Extensions.swift in Sources */,
 				D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */,
@@ -602,6 +629,7 @@
 				D0EBBA3E22D1F37F0089F645 /* TransportDetailModeuledModel.swift in Sources */,
 				D0EBBA3322D1D8F20089F645 /* HalfModalTransitioning.swift in Sources */,
 				D0D3B6AE22CD3EC400491B60 /* TransportsRouter.swift in Sources */,
+				D006AC522381D024006F7D5E /* TransportAlertActions.swift in Sources */,
 				D0EBBA4222D1F3D50089F645 /* TransportDetailTableViewCell.swift in Sources */,
 				D09968F022CD315D00713B37 /* AppDelegate.swift in Sources */,
 				D0D3B6C922CD451D00491B60 /* TransportsResponse.swift in Sources */,

@@ -24,7 +24,6 @@ enum ApiError: Error, LocalizedError {
         case .invalidData: return "Invalid data from server"
         case .responseUnsuccessful: return "Reponse was not what we expected, uh?"
         case .custom(code: _, message: let message): return message
-            
         }
     }
 }

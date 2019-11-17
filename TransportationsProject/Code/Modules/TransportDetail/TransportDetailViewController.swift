@@ -8,17 +8,16 @@
 
 import UIKit
 
-protocol TransportDetailViewProtocol: class {
+protocol TransportDetailViewProtocol: BaseViewProtocol {
     /**
      * Add here your methods for communication PRESENTER -> VIEW
      */
     
     func set(presenter: TransportDetailPresenterProtocol)
     func showSections(sections: [SectionsModuleRepresentable])
-    func showAlertTransportSelected(message: String)
 }
 
-class TransportDetailViewController: UIViewController {
+final class TransportDetailViewController: BaseViewController {
     
     // MARK: - Public properties
     @IBOutlet var tvDetailTransport: UITableView!
@@ -57,13 +56,6 @@ class TransportDetailViewController: UIViewController {
 
 extension TransportDetailViewController: TransportDetailViewProtocol {
     
-    func showAlertTransportSelected(message: String) {
-        let alert = UIAlertController(title: "INFO_TITLE".localized, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK_BUTTON".localized, style: .default))
-       
-       self.present(alert, animated: true)
-    }
-    
     func set(presenter: TransportDetailPresenterProtocol) {
         self.presenter = presenter
     }
@@ -72,5 +64,4 @@ extension TransportDetailViewController: TransportDetailViewProtocol {
         elementsDataSource.setDataSource(elements: sections)
         tvDetailTransport.reloadData()
     }
-    
 }

@@ -16,7 +16,7 @@ protocol TransportsDataManagerProtocol: class {
     func getTitle() -> String
 }
 
-class TransportsDataManager {
+final class TransportsDataManager {
     
     // MARK: - Public variables
     

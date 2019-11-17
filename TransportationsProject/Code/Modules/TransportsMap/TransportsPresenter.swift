@@ -18,7 +18,7 @@ protocol TransportsPresenterProtocol: class {
     func markerTapped(coordinate: Coordinate)
 }
 
-class TransportsPresenter {
+final class TransportsPresenter {
     
     // MARK: - Public variables
     
@@ -58,17 +58,16 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     
     func getContent() {
         
-        view?.showLoadingActivityIndicator()
+        view?.showLoading()
         
-        dataManager.getTransports { (result) in
-            
-            self.view?.hideLoadingActivityIndicator()
+        dataManager.getTransports { [weak self] result in
+            guard let self = self else {return}
+            self.view?.hideLoading()
             switch result {
             case .success(let transports):
                 guard let transports = transports else {return}
                 
                 let transportElements = transports.compactMap { element -> TransportationElementRepresentable? in
-                    
                     return element.getTransportElement()
                     
                 }
@@ -79,8 +78,13 @@ extension TransportsPresenter: TransportsPresenterProtocol {
                 self.view?.showUserLocation(mapPoints: mapPoints)
                 
             case .failure(let error):
-                self.view?.hideLoadingActivityIndicator()
-                self.view?.showError(message: error.localizedDescription)
+                self.view?.hideLoading()
+                self.view?.alert(title: "ERROR_TITLE".localized,
+                                 message: error.localizedDescription,
+                                 handler: { _ in
+                    self.getContent()
+                })
+              
             }
         }
     }
@@ -95,7 +99,7 @@ extension TransportsPresenter: TransportsPresenterProtocol {
             .first(where: { $0.coordinate.latitude == coordinate.latitude
                 && $0.coordinate.longitude == coordinate.longitude})?
             .getTransportationDetail() else {return}
-        
-        TransportDetailRouter().presentThirdHalfOfScreen(viewController: TransportDetailRouter(transportDetail: transportDetail).getPresentationController())
+        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
+        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
     }
 }

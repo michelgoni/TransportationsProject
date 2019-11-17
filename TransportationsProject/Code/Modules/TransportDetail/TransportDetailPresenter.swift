@@ -15,7 +15,7 @@ protocol TransportDetailPresenterProtocol: class {
     func getContent()
 }
 
-class TransportDetailPresenter {
+final class TransportDetailPresenter {
     
     // MARK: - Public variables
     
@@ -39,7 +39,9 @@ class TransportDetailPresenter {
     // MARK: - Private methods
     private func elementPressed(element: Any?) {
         if let transportationElement = element as? TransportDetailViewModel {
-            view?.showAlertTransportSelected(message: "SELECTED_TRANSPORT_MESSAGE".localizeWithFormat(arguments: [transportationElement.element.transportationType.text]))
+            view?.alert(title: "INFO_TITLE".localized,
+                        message: transportationElement.element.transportationType.text,
+                        handler: nil)
         }
     }
     
@@ -64,6 +66,5 @@ extension TransportDetailPresenter: TransportDetailPresenterProtocol {
         sections.append(getTransportDetailSection(modules: modules))
         view?.showSections(sections: sections)
     }
-    
 }
 

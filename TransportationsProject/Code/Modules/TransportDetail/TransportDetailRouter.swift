@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransportDetailRouter {
+final class TransportDetailRouter {
     
     // MARK: - Public variables
     

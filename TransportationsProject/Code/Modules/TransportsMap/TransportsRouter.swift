@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransportsRouter {
+final class TransportsRouter {
     
     // MARK: - Public variables
     
@@ -45,6 +45,5 @@ class TransportsRouter {
         windwow?.rootViewController = navigationController
         windwow?.makeKeyAndVisible()
     }
-    
 }
 

@@ -14,7 +14,7 @@ protocol TransportDetailDataManagerProtocol: class {
      */
 }
 
-class TransportDetailDataManager {
+final class TransportDetailDataManager {
     
     // MARK: - Public variables
     
