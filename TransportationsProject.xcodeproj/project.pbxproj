@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -176,6 +176,34 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B4C0A3D22469B3E400066AFE /* TransportationData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TransportationData;
+			sourceTree = "<group>";
+		};
+		B4C0A3D32469B3F600066AFE /* TransportationDomain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TransportationDomain;
+			sourceTree = "<group>";
+		};
+		B4C0A3D42469B44200066AFE /* TransportationApp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TransportationApp;
+			sourceTree = "<group>";
+		};
+		B4C0A3D52469BB1000066AFE /* TransportationUI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TransportationUI;
+			sourceTree = "<group>";
+		};
 		D006AC4B2381CD4B006F7D5E /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +250,10 @@
 		D09968E322CD315D00713B37 = {
 			isa = PBXGroup;
 			children = (
+				B4C0A3D52469BB1000066AFE /* TransportationUI */,
+				B4C0A3D42469B44200066AFE /* TransportationApp */,
+				B4C0A3D32469B3F600066AFE /* TransportationDomain */,
+				B4C0A3D22469B3E400066AFE /* TransportationData */,
 				D09968EE22CD315D00713B37 /* TransportationsProject */,
 				D09968ED22CD315D00713B37 /* Products */,
 				60DD23CBC112325E5D2FCBD1 /* Pods */,
