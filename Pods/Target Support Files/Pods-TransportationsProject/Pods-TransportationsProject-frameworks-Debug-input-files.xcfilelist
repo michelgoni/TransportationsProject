@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-frameworks.sh
+${BUILT_PRODUCTS_DIR}/TransportationDomain/TransportationDomain.framework
 ${BUILT_PRODUCTS_DIR}/TransportsData/TransportsData.framework

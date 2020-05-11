@@ -11,5 +11,6 @@ target 'TransportationsProject' do
   pod 'GoogleMaps'
   pod 'SwiftLint'
   pod 'TransportsData'
+  pod 'TransportationDomain'
 
 end

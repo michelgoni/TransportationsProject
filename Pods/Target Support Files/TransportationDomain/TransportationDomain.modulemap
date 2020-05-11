@@ -1,0 +1,6 @@
+framework module TransportationDomain {
+  umbrella header "TransportationDomain-umbrella.h"
+
+  export *
+  module * { export * }
+}
