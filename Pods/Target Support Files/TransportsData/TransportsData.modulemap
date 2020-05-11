@@ -1,0 +1,6 @@
+framework module TransportsData {
+  umbrella header "TransportsData-umbrella.h"
+
+  export *
+  module * { export * }
+}

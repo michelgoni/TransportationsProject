@@ -5,20 +5,25 @@ PODS:
   - GoogleMaps/Maps (3.1.0):
     - GoogleMaps/Base
   - SwiftLint (0.32.0)
+  - TransportsData (0.1.5)
 
 DEPENDENCIES:
   - GoogleMaps
   - SwiftLint
+  - TransportsData
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - GoogleMaps
     - SwiftLint
+  https://github.com/michelgoni/TransportProjectSpecs:
+    - TransportsData
 
 SPEC CHECKSUMS:
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d
+  TransportsData: b538afda8ee67fc8c5849ae394d86706d34fea82
 
-PODFILE CHECKSUM: 0821f192e7b3ef08a02bd908109dce2a3a1a1655
+PODFILE CHECKSUM: 38b92b7aec89f0687e9e30ebac8d20d081f46217
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.9.1
