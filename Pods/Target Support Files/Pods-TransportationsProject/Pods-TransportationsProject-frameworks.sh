@@ -197,10 +197,14 @@ if [ -r "${ARTIFACT_LIST_FILE}" ]; then
 fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TransportationApiClient/TransportationApiClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TransportationDomain/TransportationDomain.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TransportsData/TransportsData.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/TransportationApiClient/TransportationApiClient.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TransportationDomain/TransportationDomain.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/TransportsData/TransportsData.framework"
 fi

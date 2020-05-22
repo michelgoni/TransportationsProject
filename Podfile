@@ -12,5 +12,6 @@ target 'TransportationsProject' do
   pod 'SwiftLint'
   pod 'TransportsData'
   pod 'TransportationDomain'
+  pod 'TransportationApiClient'
 
 end

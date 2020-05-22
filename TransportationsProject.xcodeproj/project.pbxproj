@@ -176,20 +176,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B4C0A3D22469B3E400066AFE /* TransportationData */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TransportationData;
-			sourceTree = "<group>";
-		};
-		B4C0A3D32469B3F600066AFE /* TransportationDomain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TransportationDomain;
-			sourceTree = "<group>";
-		};
 		B4C0A3D42469B44200066AFE /* TransportationApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,8 +238,6 @@
 			children = (
 				B4C0A3D52469BB1000066AFE /* TransportationUI */,
 				B4C0A3D42469B44200066AFE /* TransportationApp */,
-				B4C0A3D32469B3F600066AFE /* TransportationDomain */,
-				B4C0A3D22469B3E400066AFE /* TransportationData */,
 				D09968EE22CD315D00713B37 /* TransportationsProject */,
 				D09968ED22CD315D00713B37 /* Products */,
 				60DD23CBC112325E5D2FCBD1 /* Pods */,
