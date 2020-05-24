@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransportationApiClient
 
 protocol TransportsApiClientProtocol {
     
@@ -16,6 +17,8 @@ protocol TransportsApiClientProtocol {
 class TransportsApiClient: TransportsApiClientProtocol {
     
     func getTransports(firstQueryitem: String, secondQueryItem: String, completion: @escaping (Result<TransportResponse?, ApiError>) -> Void) {
+        
+        
         TransportsApi.shared.getTransportsList(from: .listTransports(firstQueryElement: firstQueryitem, secondQueryElement: secondQueryItem), completion: completion)
     }
     

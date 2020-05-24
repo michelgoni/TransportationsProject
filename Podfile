@@ -10,8 +10,8 @@ target 'TransportationsProject' do
   # Pods for TransportationsProject
   pod 'GoogleMaps'
   pod 'SwiftLint'
-  pod 'TransportsData'
-  pod 'TransportationDomain'
+  pod 'TransportsData', '~> 0.1.11'
+  pod 'TransportationDomain', '~> 0.1.4'
   pod 'TransportationApiClient'
 
 end
