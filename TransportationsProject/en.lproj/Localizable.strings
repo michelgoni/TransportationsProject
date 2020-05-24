@@ -22,3 +22,5 @@
 "ELECTRIC_MOTORBIKE" = "Electric motorbike";
 "BIKE" = "Bike";
 
+//Error
+"ERROR_GETTING_TRANSPORTS" = "There was some error getting your transports. Please try again";

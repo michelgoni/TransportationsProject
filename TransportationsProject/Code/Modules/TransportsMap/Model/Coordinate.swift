@@ -15,7 +15,15 @@ protocol CoordinateRepresentable: Codable {
 
 struct Coordinate: CoordinateRepresentable {
     
-    static var mockCoordinate: Coordinate { 
+      static var upperRightLatLon: Coordinate {
+         return Coordinate(latitude: 38.711046, longitude: -9.160096)
+     }
+     
+     static var lowerLeftLatLong: Coordinate {
+         return Coordinate(latitude: 38.739429, longitude: -9.137115)
+     }
+    
+    static var mockCoordinate: Coordinate {
         return Coordinate(latitude: Constants.MockCoordinates.mockLatitude,
                           longitude: Constants.MockCoordinates.mockLongitude)
     }

@@ -30,7 +30,7 @@ final class TransportsRouter {
     }
     
     private var apiClient: TransportsApiClientProtocol {
-        if Environment.shared.isMock { return TransportsApiClientMock()}
+       
         return TransportsApiClient()
     }
     

@@ -60,31 +60,30 @@ extension TransportsPresenter: TransportsPresenterProtocol {
         
         view?.showLoading()
         
-        dataManager.getTransports { [weak self] result in
+        dataManager.getTransports(success: { [weak self] response in
+          
             guard let self = self else {return}
             self.view?.hideLoading()
-            switch result {
-            case .success(let transports):
-                guard let transports = transports else {return}
+            let transportElements = response.compactMap { element -> TransportationElementRepresentable? in
+                return element.getTransportElement()
                 
-                let transportElements = transports.compactMap { element -> TransportationElementRepresentable? in
-                    return element.getTransportElement()
-                    
-                }
-                self.transportElements = transportElements
-                let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
-                
-                guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
-                self.view?.showUserLocation(mapPoints: mapPoints)
-                
-            case .failure(let error):
-                self.view?.hideLoading()
+            }
+             self.transportElements = transportElements
+            let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
+            
+            guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
+            self.view?.showUserLocation(mapPoints: mapPoints)
+        }){ error in
+           
+             self.view?.hideLoading()
+            if Environment.shared.isMock {
+                self.view?.alert(title: "ERROR_TITLE".localized, message: error.errorString, handler: nil)
+            } else {
                 self.view?.alert(title: "ERROR_TITLE".localized,
-                                 message: error.localizedDescription,
+                                 message: "ERROR_GETTING_TRANSPORTS".localized,
                                  handler: { _ in
-                    self.getContent()
+                                    self.getContent()
                 })
-              
             }
         }
     }

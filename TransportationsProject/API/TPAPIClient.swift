@@ -15,7 +15,7 @@ public class TPAPIClient: APIClient {
     static let shared = TPAPIClient( printsDebug: true)
     
     override public var baseEndpoint: String {
-        return "https://apidev.meep.m"
+        return "https://apidev.meep.me"
     }
     
     public func sendServer<T: APIRequest>(_ request: T, success: @escaping (T.Response) -> Void, failure: @escaping (ErrorResponse) -> Void) {

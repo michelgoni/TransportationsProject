@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import TransportsData
+import TransportationDomain
 
 protocol TransportsDataManagerProtocol: class {
     /**
      * Add here your methods for communication PRESENTER -> DATA_MANAGER
      */
-    func getTransports( completion: @escaping (Result<[TransportsResponse]?, ApiError>) -> Void)
+    func getTransports( success: @escaping (TransportResponse) -> Void, failure: @escaping (ErrorResponse) -> Void)
     func getTitle() -> String
 }
 
@@ -31,11 +33,9 @@ final class TransportsDataManager {
 }
 
 extension TransportsDataManager: TransportsDataManagerProtocol {
-    func getTransports(completion: @escaping (Result<[TransportsResponse]?, ApiError>) -> Void) {
+    func getTransports(success: @escaping (TransportResponse) -> Void, failure: @escaping (ErrorResponse) -> Void) {
         
-        apiClient.getTransports(firstQueryitem: Constants.MockQueryitems.firstQueryItem,
-                                secondQueryItem: Constants.MockQueryitems.secondQueryItem,
-                                completion: completion)
+        apiClient.getTransports(success: success, failure: failure)
     }
     
     func getTitle() -> String {
