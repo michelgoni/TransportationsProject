@@ -59,41 +59,49 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     func getContent() {
         
         view?.showLoading()
-        dataManager.getTransportsElements { (result) in
+        dataManager.getTransportsElements { [weak self] result in
+            self?.view?.hideLoading()
+            
             switch result {
             case .success(let transports):
                 debugPrint(transports)
+                let transportElements = transports.compactMap {element -> TransportationElementRepresentable? in
+                     TransportationElement(coordinate: Coordinate(latitude: element.coordinate.latitude, longitude: element.coordinate.longitude))
+                }
+                let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
+                 guard let mapPoints = self?.buildMapPoints(mapPoints: mapPointsModel) else {return}
+                self?.view?.showUserLocation(mapPoints: mapPoints)
             case .failure(let error):
-                debugPrint(error)
+                self?.view?.alert(title: "ERROR_TITLE".localized, message: error.errorString, handler: nil)
             }
         }
         
-        dataManager.getTransports(success: { [weak self] response in
-          
-            guard let self = self else {return}
-            self.view?.hideLoading()
-            let transportElements = response.compactMap { element -> TransportationElementRepresentable? in
-                return element.getTransportElement()
-                
-            }
-             self.transportElements = transportElements
-            let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
-            
-            guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
-            self.view?.showUserLocation(mapPoints: mapPoints)
-        }) { error in
-           
-             self.view?.hideLoading()
-            if Environment.shared.isMock {
-                self.view?.alert(title: "ERROR_TITLE".localized, message: error.errorString, handler: nil)
-            } else {
-                self.view?.alert(title: "ERROR_TITLE".localized,
-                                 message: "ERROR_GETTING_TRANSPORTS".localized,
-                                 handler: { _ in
-                                    self.getContent()
-                })
-            }
-        }
+//        dataManager.getTransports(success: { [weak self] response in
+//
+//            guard let self = self else {return}
+//            self.view?.hideLoading()
+//            let transportElements = response.compactMap { element -> TransportationElementRepresentable? in
+//                return element.getTransportElement()
+//
+//            }
+//             self.transportElements = transportElements
+//            let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
+//
+//            guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
+//            self.view?.showUserLocation(mapPoints: mapPoints)
+//        }) { error in
+//
+//             self.view?.hideLoading()
+//            if Environment.shared.isMock {
+//                self.view?.alert(title: "ERROR_TITLE".localized, message: error.errorString, handler: nil)
+//            } else {
+//                self.view?.alert(title: "ERROR_TITLE".localized,
+//                                 message: "ERROR_GETTING_TRANSPORTS".localized,
+//                                 handler: { _ in
+//                                    self.getContent()
+//                })
+//            }
+//        }
     }
     
     func getTitle() {
@@ -102,11 +110,11 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     
     func markerTapped(coordinate: Coordinate) {
         
-        guard let transportDetail = transportElements?
-            .first(where: { $0.coordinate.latitude == coordinate.latitude
-                && $0.coordinate.longitude == coordinate.longitude})?
-            .getTransportationDetail() else {return}
-        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
-        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
+//        guard let transportDetail = transportElements?
+//            .first(where: { $0.coordinate.latitude == coordinate.latitude
+//                && $0.coordinate.longitude == coordinate.longitude})?
+//            .getTransportationDetail() else {return}
+//        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
+//        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
     }
 }

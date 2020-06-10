@@ -28,30 +28,30 @@ struct TransportationDetail: TransportationDetailRepresentable {
 protocol TransportationElementRepresentable {
     
     var coordinate: Coordinate {get set}
-    var transportationDetail: TransportationDetailRepresentable {get set}
+   // var transportationDetail: TransportationDetailRepresentable {get set}
     func getMarker() -> GMSMarker
-    func getTransportationDetail() -> TransportationDetailRepresentable
+//    func getTransportationDetail() -> TransportationDetailRepresentable
 }
 
 struct TransportationElement: TransportationElementRepresentable {
     
     var coordinate: Coordinate
-    var transportationDetail: TransportationDetailRepresentable
+   // var transportationDetail: TransportationDetailRepresentable
     
     func getMarker() -> GMSMarker {
-        
+
         let marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude,
                                                  longitude: coordinate.longitude)
         let markerView = MarkerView(frame: CGRect(x: 0, y: 0, width: Constants.MarkerView.markerViewWidth,
                                                   height: Constants.MarkerView.markerViewHeight),
-                                    image: transportationDetail.icon)
+                                    image: #imageLiteral(resourceName: "bike.png")) 
         marker.iconView = markerView
         return marker
     }
     
-    func getTransportationDetail() -> TransportationDetailRepresentable {
-        
-        return transportationDetail
-    }
+//    func getTransportationDetail() -> TransportationDetailRepresentable {
+//
+//        return transportationDetail
+//    }
 }

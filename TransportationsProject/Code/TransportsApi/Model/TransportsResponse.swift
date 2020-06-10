@@ -118,8 +118,7 @@ struct TransportsResponse: Codable {
     func getTransportElement() -> TransportationElementRepresentable? {
         guard let transportationDetail = getTransportationDetail() else {return nil}
         
-        return TransportationElement(coordinate: Coordinate(latitude: elementYPosition, longitude: elementXPosition),
-                                     transportationDetail: transportationDetail)
+        return TransportationElement(coordinate: Coordinate(latitude: elementYPosition, longitude: elementXPosition))
     }
     
     func getTransportationDetail() -> TransportationDetailRepresentable? {
