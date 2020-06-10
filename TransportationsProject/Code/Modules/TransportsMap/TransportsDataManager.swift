@@ -15,6 +15,7 @@ protocol TransportsDataManagerProtocol: class {
      */
     func getTransports( success: @escaping (TransportResponse) -> Void, failure: @escaping (ErrorResponse) -> Void)
     func getTitle() -> String
+    func getTransportsElements(completion: @escaping(Result<[Transports], ErrorResponse>) -> Void)
 }
 
 final class TransportsDataManager {
@@ -23,11 +24,13 @@ final class TransportsDataManager {
     
     // MARK: - Private variables
     private let apiClient: TransportsApiClientProtocol
+    private let useCase: TransportationsUseCase
     
     // MARK: - Initialization
     
-    init(apiClient: TransportsApiClientProtocol) {
+    init(apiClient: TransportsApiClientProtocol, useCase: TransportationsUseCase) {
         self.apiClient = apiClient
+        self.useCase = useCase
         
     }
 }
@@ -41,6 +44,10 @@ extension TransportsDataManager: TransportsDataManagerProtocol {
     func getTitle() -> String {
         
         return "TRANSPORT_VC_TITLE".localized
+    }
+    
+    func getTransportsElements(completion: @escaping(Result<[Transports], ErrorResponse>) -> Void) {
+        useCase.getElements(companyZone: "lisboa", completion: completion)
     }
     
 }

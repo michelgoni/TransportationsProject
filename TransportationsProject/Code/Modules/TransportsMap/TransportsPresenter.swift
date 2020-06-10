@@ -48,7 +48,7 @@ final class TransportsPresenter {
         
         let markers = mapPoints.transportElements.map { element -> GMSMarker in
             
-            return element.getMarker()
+             element.getMarker()
         }
         return MapPointsPosition(cameraPosition: cameraPosition, markers: markers)
     }
@@ -59,6 +59,14 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     func getContent() {
         
         view?.showLoading()
+        dataManager.getTransportsElements { (result) in
+            switch result {
+            case .success(let transports):
+                debugPrint(transports)
+            case .failure(let error):
+                debugPrint(error)
+            }
+        }
         
         dataManager.getTransports(success: { [weak self] response in
           
