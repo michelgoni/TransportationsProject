@@ -1,24 +1,26 @@
 PODS:
-  - Alamofire (5.2.0)
-  - GoogleMaps (3.8.2):
-    - GoogleMaps/Maps (= 3.8.2)
-  - GoogleMaps/Base (3.8.2)
-  - GoogleMaps/Maps (3.8.2):
+  - Alamofire (5.2.1)
+  - GoogleMaps (3.9.0):
+    - GoogleMaps/Maps (= 3.9.0)
+  - GoogleMaps/Base (3.9.0)
+  - GoogleMaps/Maps (3.9.0):
     - GoogleMaps/Base
   - SwiftLint (0.39.2)
-  - TransportationApiClient (0.1.2):
+  - TransportationApiClient (0.1.2.beta4):
     - Alamofire (~> 5.2)
-    - TransportationDomain
-    - TransportsData (~> 0.1.11)
-  - TransportationDomain (0.1.4)
-  - TransportsData (0.1.11)
+  - TransportationDomain (0.1.4.beta16):
+    - TransportsUI (= 0.1.1.beta7)
+  - TransportsData (0.1.11.beta4):
+    - TransportationApiClient (= 0.1.2.beta4)
+    - TransportationDomain (= 0.1.4.beta16)
+  - TransportsUI (0.1.1.beta7)
 
 DEPENDENCIES:
   - GoogleMaps
   - SwiftLint
-  - TransportationApiClient
-  - TransportationDomain (~> 0.1.4)
-  - TransportsData (~> 0.1.11)
+  - TransportationApiClient (= 0.1.2.beta4)
+  - TransportationDomain (= 0.1.4.beta16)
+  - TransportsData (= 0.1.11.beta4)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -29,15 +31,17 @@ SPEC REPOS:
     - TransportationApiClient
     - TransportationDomain
     - TransportsData
+    - TransportsUI
 
 SPEC CHECKSUMS:
-  Alamofire: c1ca147559e730bfb2182c8c7aafbdd90a867987
-  GoogleMaps: ae0efe10e9c40bcd9decd0c9fd53d947af7801a3
+  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
+  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
-  TransportationApiClient: 4fa9df2b43fb7e3a8d200dfe01dfbb86634c319a
-  TransportationDomain: d057c1b63350242778dd7afc3854bafbc45dfbb4
-  TransportsData: 00fed95355d6957baa8750bb57a8ee0e0a1723b2
+  TransportationApiClient: 7dbf668ad152b659e81a48c233a00da5290ade78
+  TransportationDomain: ddfd2d5b5cceb9e6deebd11b7652267e833fc1e2
+  TransportsData: 9fc21f3dc47769433c3bc7273d0413058209b9fa
+  TransportsUI: 958d03606ee4506e8486feff83b25d805788c644
 
-PODFILE CHECKSUM: 115373b62a12acf557e68a55f28e97649d18e664
+PODFILE CHECKSUM: f12b6f71d52b6a180a6ca87808fae7816e5a4137
 
 COCOAPODS: 1.9.1

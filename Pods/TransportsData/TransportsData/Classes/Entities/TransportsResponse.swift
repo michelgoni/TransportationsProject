@@ -6,29 +6,31 @@
 //
 
 import Foundation
+import TransportsUI
+import TransportationDomain
 
-typealias TransportResponse = [TransportsResponse]
+public typealias TransportResponse = [TransportsResponse]
 
 public struct TransportsResponse: Codable {
     
-    let address: String
-    let elementXPosition: Double
-    let elementYPosition: Double
-    let companyZoneId: Int
-    let longitude: Double?
-    let latitude: Double?
-    let licencePlate: String?
-    let batteryLevel: Int?
-    let model: String?
-    let pricePerMinuteParking: Int?
-    let pricePerMinuteDriving: Int?
-    let station: Bool?
-    let availableResources: Int?
-    let spacesAvailable: Int?
-    let allowDropoff: Bool?
-    let bikesAvailable: Int?
+    public let address: String
+    public let elementXPosition: Double
+    public let elementYPosition: Double
+    public let companyZoneId: Int
+    public let longitude: Double?
+    public let latitude: Double?
+    public let licencePlate: String?
+    public let batteryLevel: Int?
+    public let model: String?
+    public let pricePerMinuteParking: Int?
+    public let pricePerMinuteDriving: Int?
+    public let station: Bool?
+    public let availableResources: Int?
+    public let spacesAvailable: Int?
+    public let allowDropoff: Bool?
+    public let bikesAvailable: Int?
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         
         case address = "name"
         case elementXPosition = "x"
@@ -48,16 +50,34 @@ public struct TransportsResponse: Codable {
         case bikesAvailable
     }
     
-    enum CompanyZone: String {
+    public enum CompanyZone: String {
         case metro = "378"
         case bus = "382"
         case car = "545"
         case electricCar = "467"
         case electricMotorBike = "473"
         case bike = "412"
-
     }
     
+    public func getAddress() -> TextConfigurableProtocol {
+        
+        return TextConfigurable(text: address,
+                                font: fontStyle.font(forTextStyle: .body),
+                                color: .black,
+                                alignment: .center)
+    }
+    
+    public func map() -> Transports {
+        return Transports(transport: self)
+    }
+}
 
+extension Transports {
+    
+    public init(transport: TransportsResponse) {
+        self.init(coordinate: Coordinate(latitude: transport.elementYPosition,
+                                         longitude: transport.elementXPosition))
+        
+    }
 }
 

@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '12.2'
+platform :ios, '11.0'
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/michelgoni/TransportProjectSpecs.git'
 
@@ -10,8 +10,8 @@ target 'TransportationsProject' do
   # Pods for TransportationsProject
   pod 'GoogleMaps'
   pod 'SwiftLint'
-  pod 'TransportsData', '~> 0.1.11'
-  pod 'TransportationDomain', '~> 0.1.4'
-  pod 'TransportationApiClient'
+  pod 'TransportsData', '0.1.11.beta4'
+  pod 'TransportationDomain', '0.1.4.beta16'
+  pod 'TransportationApiClient', '0.1.2.beta4'
 
 end

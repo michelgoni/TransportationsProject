@@ -9,9 +9,6 @@
 import UIKit
 
 protocol TransportDetailDataManagerProtocol: class {
-    /**
-     * Add here your methods for communication PRESENTER -> DATA_MANAGER
-     */
 }
 
 final class TransportDetailDataManager {

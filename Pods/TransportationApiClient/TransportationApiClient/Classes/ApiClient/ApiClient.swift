@@ -23,7 +23,7 @@ open class APIClient {
         self.printsDebug = printsDebug
     }
     
-    public func send<T: APIRequest>(_ request: T, success: @escaping (T.Response) -> Void, failure: @escaping (ServerError) -> Void) {
+    open func send<T: APIRequest>(_ request: T, success: @escaping (T.Response) -> Void, failure: @escaping (ServerError) -> Void) {
         
         let endpoint = self.endpoint(for: request)
         let parameters = request.body

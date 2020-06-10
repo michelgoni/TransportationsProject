@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import TransportationDomain
+import TransportsData
+import TransportationApiClient
 
 final class TransportsRouter {
     
@@ -32,6 +35,18 @@ final class TransportsRouter {
     private var apiClient: TransportsApiClientProtocol {
        
         return TransportsApiClient()
+    }
+    
+    private var apiService: TransportsApiService {
+        return TransportsApiServiceImplm(apiService: TPAPIClient() )
+    }
+    
+    private var repository: TransportRepository {
+        return TransportsRepositoryImplm(apiService: apiService)
+    }
+    
+    private var useCase: TransportationsUseCase {
+        return TransportationsUseCaseImpl(repository: repository)
     }
     
     // MARK: - Initialization

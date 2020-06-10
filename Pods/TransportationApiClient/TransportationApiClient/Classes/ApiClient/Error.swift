@@ -10,4 +10,9 @@ import Foundation
 public struct ServerError {
     public let rawError: Error?
     public let clientError: Any?
+    
+    public init(rawError: Error? = nil, clientError: Any? = nil) {
+        self.rawError = rawError
+        self.clientError = clientError
+    }
 }

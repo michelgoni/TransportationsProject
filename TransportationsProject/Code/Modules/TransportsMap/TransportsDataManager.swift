@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TransportsData
 import TransportationDomain
 
 protocol TransportsDataManagerProtocol: class {
@@ -29,6 +28,7 @@ final class TransportsDataManager {
     
     init(apiClient: TransportsApiClientProtocol) {
         self.apiClient = apiClient
+        
     }
 }
 

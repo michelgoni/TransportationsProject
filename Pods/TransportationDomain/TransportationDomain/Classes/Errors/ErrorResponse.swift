@@ -12,7 +12,7 @@ public struct ErrorResponseContainer: Decodable {
     public let error: ErrorResponse
 }
 
-public struct ErrorResponse: Decodable {
+public struct ErrorResponse: Decodable, Error {
    
     let internalMessage: String
     

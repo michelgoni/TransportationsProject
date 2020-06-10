@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 public protocol TransportRepository {
-   
+    func getElements(companyZone: String, completion: @escaping (Result<[Transports], ErrorResponse>) -> Void)
 }

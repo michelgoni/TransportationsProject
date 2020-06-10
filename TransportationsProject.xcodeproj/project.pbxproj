@@ -31,7 +31,6 @@
 		D0D3B6AE22CD3EC400491B60 /* TransportsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6A822CD3EC400491B60 /* TransportsRouter.swift */; };
 		D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6A922CD3EC400491B60 /* TransportsViewController.swift */; };
 		D0D3B6B022CD3EC400491B60 /* TransportsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */; };
-		D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */; };
 		D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */; };
 		D0D3B6B622CD3EE700491B60 /* Transports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D3B6B522CD3EE700491B60 /* Transports.storyboard */; };
 		D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6B822CD40C200491B60 /* Enviroment.swift */; };
@@ -93,7 +92,6 @@
 		D0D3B6A822CD3EC400491B60 /* TransportsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsRouter.swift; sourceTree = "<group>"; };
 		D0D3B6A922CD3EC400491B60 /* TransportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsViewController.swift; sourceTree = "<group>"; };
 		D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsApiClient.swift; sourceTree = "<group>"; };
-		D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsApiClientMock.swift; sourceTree = "<group>"; };
 		D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsDataManager.swift; sourceTree = "<group>"; };
 		D0D3B6B522CD3EE700491B60 /* Transports.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transports.storyboard; sourceTree = "<group>"; };
 		D0D3B6B822CD40C200491B60 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
@@ -313,7 +311,6 @@
 			children = (
 				B45004BE247ADBF4009D2561 /* Request */,
 				D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */,
-				D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -636,7 +633,6 @@
 				D006AC502381CFF4006F7D5E /* AlertActions.swift in Sources */,
 				D00D6DE922CE9D0F004F9638 /* NIbabble.swift in Sources */,
 				D0EBBA5122D1FC580089F645 /* UILabel+Extensions.swift in Sources */,
-				D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */,
 				D0EBBA3522D1D92F0089F645 /* HalfModalInteractiveTransition.swift in Sources */,
 				2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */,
 				D0EBBA3E22D1F37F0089F645 /* TransportDetailModeuledModel.swift in Sources */,

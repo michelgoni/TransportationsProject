@@ -73,7 +73,7 @@ extension TransportsPresenter: TransportsPresenterProtocol {
             
             guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
             self.view?.showUserLocation(mapPoints: mapPoints)
-        }){ error in
+        }) { error in
            
              self.view?.hideLoading()
             if Environment.shared.isMock {

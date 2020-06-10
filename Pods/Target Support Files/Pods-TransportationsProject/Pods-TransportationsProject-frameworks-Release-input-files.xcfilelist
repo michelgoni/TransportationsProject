@@ -3,3 +3,4 @@ ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/TransportationApiClient/TransportationApiClient.framework
 ${BUILT_PRODUCTS_DIR}/TransportationDomain/TransportationDomain.framework
 ${BUILT_PRODUCTS_DIR}/TransportsData/TransportsData.framework
+${BUILT_PRODUCTS_DIR}/TransportsUI/TransportsUI.framework
