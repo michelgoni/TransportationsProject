@@ -31,7 +31,7 @@ protocol TransportationElementRepresentable {
     var transport: Transports {get set}
    // var transportationDetail: TransportationDetailRepresentable {get set}
     func getMarker() -> GMSMarker
-//    func getTransportationDetail() -> TransportationDetailRepresentable
+    func getTransportationDetail() -> TransportationDetailRepresentable
 }
 
 struct TransportationElement: TransportationElementRepresentable {
@@ -54,7 +54,7 @@ struct TransportationElement: TransportationElementRepresentable {
     
 //    func getTransportationDetail() -> TransportationDetailRepresentable {
 //
-//        return transportationDetail
+//        return TransportationDetail(address: <#T##TextConfigurableProtocol#>, icon: <#T##UIImage#>, transportationType: <#T##TextConfigurableProtocol#>, actionEnabled: <#T##Bool#>)
 //    }
 }
 

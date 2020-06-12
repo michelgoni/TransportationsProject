@@ -86,11 +86,12 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     
     func markerTapped(coordinate: Coordinate) {
         
-        //        guard let transportDetail = transportElements?
-        //            .first(where: { $0.coordinate.latitude == coordinate.latitude
-        //                && $0.coordinate.longitude == coordinate.longitude})?
-        //            .getTransportationDetail() else {return}
-        //        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
-        //        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
+        let transportDetail = transportElements?.first(where: { $0.transport.coordinate.latitude == coordinate.latitude && $0.transport.coordinate.longitude == coordinate.longitude})
+//        guard let transportDetail = transportElements?
+//            .first(where: { $0.coordinate.latitude == coordinate.latitude
+//                && $0.coordinate.longitude == coordinate.longitude})?
+//            .getTransportationDetail() else {return}
+//        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
+//        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
     }
 }

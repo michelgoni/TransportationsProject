@@ -14,7 +14,6 @@ protocol TransportsDataManagerProtocol: class {
     /**
      * Add here your methods for communication PRESENTER -> DATA_MANAGER
      */
-    func getTransports( success: @escaping (TransportResponse) -> Void, failure: @escaping (ErrorResponse) -> Void)
     func getTitle() -> String
     func getTransportsElements(completion: @escaping(Result<[Transports], ErrorResponse>) -> Void)
 }
@@ -24,23 +23,16 @@ final class TransportsDataManager {
     // MARK: - Public variables
     
     // MARK: - Private variables
-    private let apiClient: TransportsApiClientProtocol
     private let useCase: TransportationsUseCase
     
     // MARK: - Initialization
     
-    init(apiClient: TransportsApiClientProtocol, useCase: TransportationsUseCase) {
-        self.apiClient = apiClient
+    init(useCase: TransportationsUseCase) {
         self.useCase = useCase
-        
     }
 }
 
 extension TransportsDataManager: TransportsDataManagerProtocol {
-    func getTransports(success: @escaping (TransportResponse) -> Void, failure: @escaping (ErrorResponse) -> Void) {
-        
-        apiClient.getTransports(success: success, failure: failure)
-    }
     
     func getTitle() -> String {
         

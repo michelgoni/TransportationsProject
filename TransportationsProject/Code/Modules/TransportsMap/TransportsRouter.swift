@@ -28,13 +28,7 @@ final class TransportsRouter {
     }
     
     private var dataManager: TransportsDataManagerProtocol {
-        
-        return TransportsDataManager(apiClient: apiClient, useCase: useCase)
-    }
-    
-    private var apiClient: TransportsApiClientProtocol {
-       
-        return TransportsApiClient()
+        return TransportsDataManager(useCase: useCase)
     }
     
     private var apiService: TransportsApiService {
