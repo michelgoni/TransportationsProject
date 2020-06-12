@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import TransportationDomain
+import TransportsData
+import TransportationApiClient
 
 final class TransportsRouter {
     
@@ -25,13 +28,19 @@ final class TransportsRouter {
     }
     
     private var dataManager: TransportsDataManagerProtocol {
-        
-        return TransportsDataManager(apiClient: apiClient)
+        return TransportsDataManager(useCase: useCase)
     }
     
-    private var apiClient: TransportsApiClientProtocol {
-        if Environment.shared.isMock { return TransportsApiClientMock()}
-        return TransportsApiClient()
+    private var apiService: TransportsApiService {
+        return TransportsApiServiceImplm(apiService: TPAPIClient() )
+    }
+    
+    private var repository: TransportRepository {
+        return TransportsRepositoryImplm(apiService: apiService)
+    }
+    
+    private var useCase: TransportationsUseCase {
+        return TransportationsUseCaseImpl(repository: repository)
     }
     
     // MARK: - Initialization

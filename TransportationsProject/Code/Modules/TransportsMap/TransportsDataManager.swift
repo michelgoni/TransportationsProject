@@ -7,13 +7,17 @@
 //
 
 import UIKit
+import TransportationDomain
+import TransportsData
 
 protocol TransportsDataManagerProtocol: class {
     /**
      * Add here your methods for communication PRESENTER -> DATA_MANAGER
      */
-    func getTransports( completion: @escaping (Result<[TransportsResponse]?, ApiError>) -> Void)
     func getTitle() -> String
+    func getTransportsElements(completion: @escaping(Result<[Transports], ErrorResponse>) -> Void)
+    func setTransportsElements(transportElements: [TransportationElementRepresentable])
+    func getTransportsElements() -> [TransportationElementRepresentable]?
 }
 
 final class TransportsDataManager {
@@ -21,26 +25,33 @@ final class TransportsDataManager {
     // MARK: - Public variables
     
     // MARK: - Private variables
-    private let apiClient: TransportsApiClientProtocol
+    private let useCase: TransportationsUseCase
+    private var transportElements: [TransportationElementRepresentable]?
     
     // MARK: - Initialization
     
-    init(apiClient: TransportsApiClientProtocol) {
-        self.apiClient = apiClient
+    init(useCase: TransportationsUseCase) {
+        self.useCase = useCase
     }
 }
 
 extension TransportsDataManager: TransportsDataManagerProtocol {
-    func getTransports(completion: @escaping (Result<[TransportsResponse]?, ApiError>) -> Void) {
-        
-        apiClient.getTransports(firstQueryitem: Constants.MockQueryitems.firstQueryItem,
-                                secondQueryItem: Constants.MockQueryitems.secondQueryItem,
-                                completion: completion)
+    
+    func setTransportsElements(transportElements: [TransportationElementRepresentable]) {
+        self.transportElements = transportElements
+    }
+    
+    func getTransportsElements() -> [TransportationElementRepresentable]? {
+        return self.transportElements
     }
     
     func getTitle() -> String {
         
         return "TRANSPORT_VC_TITLE".localized
+    }
+    
+    func getTransportsElements(completion: @escaping(Result<[Transports], ErrorResponse>) -> Void) {
+        useCase.getElements(companyZone: "lisboa", completion: completion)
     }
     
 }

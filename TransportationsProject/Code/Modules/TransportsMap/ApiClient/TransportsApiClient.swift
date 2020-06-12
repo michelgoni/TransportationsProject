@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import TransportationApiClient
+import TransportsData
+import TransportationDomain
 
 protocol TransportsApiClientProtocol {
     
-     func getTransports(firstQueryitem: String, secondQueryItem: String, completion: @escaping (Result<TransportResponse?, ApiError>) -> Void)
+     func getTransports(success: @escaping (TransportResponse) -> Void, failure: @escaping (ErrorResponse) -> Void)
 }
 
 class TransportsApiClient: TransportsApiClientProtocol {
     
-    func getTransports(firstQueryitem: String, secondQueryItem: String, completion: @escaping (Result<TransportResponse?, ApiError>) -> Void) {
-        TransportsApi.shared.getTransportsList(from: .listTransports(firstQueryElement: firstQueryitem, secondQueryElement: secondQueryItem), completion: completion)
+   func getTransports(success: @escaping (TransportResponse) -> Void, failure: @escaping (ErrorResponse) -> Void) {
+        
+        let request = TransportsRequest(baseApiParams: BaseApiParams(market: "lisboa"))
+        TPAPIClient.shared.sendServer(request, success: success, failure: failure)
+        
+//        TransportsApi.shared.getTransportsList(from: .listTransports(firstQueryElement: firstQueryitem, secondQueryElement: secondQueryItem), completion: completion)
     }
     
 }

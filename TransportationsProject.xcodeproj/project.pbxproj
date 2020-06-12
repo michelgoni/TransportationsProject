@@ -3,13 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1F1F47546097C3F6959D030E /* Pods_TransportationsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */; };
 		2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309DF22CE04070092484A /* SignedNumeric+Extensions.swift */; };
 		2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309E322CE2BB10092484A /* MapPointsModel.swift */; };
+		B45004B9247ACD7C009D2561 /* TPAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45004B8247ACD7C009D2561 /* TPAPIClient.swift */; };
+		B45004C0247ADC07009D2561 /* TransportsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45004BF247ADC07009D2561 /* TransportsRequest.swift */; };
+		B45004C2247ADC3D009D2561 /* BaseApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45004C1247ADC3D009D2561 /* BaseApiParams.swift */; };
 		D006AC4D2381CD5F006F7D5E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006AC4C2381CD5F006F7D5E /* BaseViewController.swift */; };
 		D006AC502381CFF4006F7D5E /* AlertActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006AC4F2381CFF4006F7D5E /* AlertActions.swift */; };
 		D006AC522381D024006F7D5E /* TransportAlertActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D006AC512381D024006F7D5E /* TransportAlertActions.swift */; };
@@ -28,19 +31,11 @@
 		D0D3B6AE22CD3EC400491B60 /* TransportsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6A822CD3EC400491B60 /* TransportsRouter.swift */; };
 		D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6A922CD3EC400491B60 /* TransportsViewController.swift */; };
 		D0D3B6B022CD3EC400491B60 /* TransportsApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */; };
-		D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */; };
 		D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */; };
 		D0D3B6B622CD3EE700491B60 /* Transports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D3B6B522CD3EE700491B60 /* Transports.storyboard */; };
 		D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6B822CD40C200491B60 /* Enviroment.swift */; };
-		D0D3B6BD22CD421A00491B60 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6BC22CD421A00491B60 /* Endpoint.swift */; };
-		D0D3B6BF22CD425400491B60 /* TransportApiCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6BE22CD425400491B60 /* TransportApiCase.swift */; };
-		D0D3B6C122CD432D00491B60 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6C022CD432D00491B60 /* ApiError.swift */; };
-		D0D3B6C322CD435200491B60 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6C222CD435200491B60 /* ApiClient.swift */; };
-		D0D3B6C622CD446700491B60 /* TransportsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6C522CD446700491B60 /* TransportsApi.swift */; };
-		D0D3B6C922CD451D00491B60 /* TransportsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6C822CD451D00491B60 /* TransportsResponse.swift */; };
 		D0EAC1BB22CDAD5600C052A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BA22CDAD5600C052A2 /* Constants.swift */; };
 		D0EAC1BE22CDB9F800C052A2 /* MapPointsPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */; };
-		D0EAC1C022CDBB7E00C052A2 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */; };
 		D0EAC1C222CDBC8E00C052A2 /* TransportationElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */; };
 		D0EBBA2522D1D7100089F645 /* TransportDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2122D1D7100089F645 /* TransportDetailPresenter.swift */; };
 		D0EBBA2622D1D7100089F645 /* TransportDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2222D1D7100089F645 /* TransportDetailRouter.swift */; };
@@ -72,6 +67,9 @@
 		2D1309E322CE2BB10092484A /* MapPointsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsModel.swift; sourceTree = "<group>"; };
 		897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.release.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.release.xcconfig"; sourceTree = "<group>"; };
 		99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.debug.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.debug.xcconfig"; sourceTree = "<group>"; };
+		B45004B8247ACD7C009D2561 /* TPAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPAPIClient.swift; sourceTree = "<group>"; };
+		B45004BF247ADC07009D2561 /* TransportsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsRequest.swift; sourceTree = "<group>"; };
+		B45004C1247ADC3D009D2561 /* BaseApiParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiParams.swift; sourceTree = "<group>"; };
 		D006AC4C2381CD5F006F7D5E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D006AC4F2381CFF4006F7D5E /* AlertActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActions.swift; sourceTree = "<group>"; };
 		D006AC512381D024006F7D5E /* TransportAlertActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportAlertActions.swift; sourceTree = "<group>"; };
@@ -92,19 +90,11 @@
 		D0D3B6A822CD3EC400491B60 /* TransportsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsRouter.swift; sourceTree = "<group>"; };
 		D0D3B6A922CD3EC400491B60 /* TransportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsViewController.swift; sourceTree = "<group>"; };
 		D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsApiClient.swift; sourceTree = "<group>"; };
-		D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsApiClientMock.swift; sourceTree = "<group>"; };
 		D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsDataManager.swift; sourceTree = "<group>"; };
 		D0D3B6B522CD3EE700491B60 /* Transports.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transports.storyboard; sourceTree = "<group>"; };
 		D0D3B6B822CD40C200491B60 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
-		D0D3B6BC22CD421A00491B60 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		D0D3B6BE22CD425400491B60 /* TransportApiCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportApiCase.swift; sourceTree = "<group>"; };
-		D0D3B6C022CD432D00491B60 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
-		D0D3B6C222CD435200491B60 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		D0D3B6C522CD446700491B60 /* TransportsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsApi.swift; sourceTree = "<group>"; };
-		D0D3B6C822CD451D00491B60 /* TransportsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsResponse.swift; sourceTree = "<group>"; };
 		D0EAC1BA22CDAD5600C052A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsPosition.swift; sourceTree = "<group>"; };
-		D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationElement.swift; sourceTree = "<group>"; };
 		D0EBBA2122D1D7100089F645 /* TransportDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailPresenter.swift; sourceTree = "<group>"; };
 		D0EBBA2222D1D7100089F645 /* TransportDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailRouter.swift; sourceTree = "<group>"; };
@@ -174,6 +164,14 @@
 				897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B45004BE247ADBF4009D2561 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B45004BF247ADC07009D2561 /* TransportsRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		D006AC4B2381CD4B006F7D5E /* Base */ = {
@@ -264,7 +262,6 @@
 		D0D3B69B22CD3E1E00491B60 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				D0D3B6C422CD444200491B60 /* TransportsApi */,
 				D0D3B6B722CD40A100491B60 /* Common */,
 				D0D3B6A522CD3E9400491B60 /* Modules */,
 			);
@@ -307,8 +304,8 @@
 		D0D3B6B322CD3ECB00491B60 /* ApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				B45004BE247ADBF4009D2561 /* Request */,
 				D0D3B6AA22CD3EC400491B60 /* TransportsApiClient.swift */,
-				D0D3B6AB22CD3EC400491B60 /* TransportsApiClientMock.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -341,36 +338,16 @@
 		D0D3B6BB22CD41FB00491B60 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				D0D3B6BC22CD421A00491B60 /* Endpoint.swift */,
-				D0D3B6BE22CD425400491B60 /* TransportApiCase.swift */,
-				D0D3B6C022CD432D00491B60 /* ApiError.swift */,
-				D0D3B6C222CD435200491B60 /* ApiClient.swift */,
+				B45004B8247ACD7C009D2561 /* TPAPIClient.swift */,
+				B45004C1247ADC3D009D2561 /* BaseApiParams.swift */,
 			);
 			path = API;
-			sourceTree = "<group>";
-		};
-		D0D3B6C422CD444200491B60 /* TransportsApi */ = {
-			isa = PBXGroup;
-			children = (
-				D0D3B6C722CD44FD00491B60 /* Model */,
-				D0D3B6C522CD446700491B60 /* TransportsApi.swift */,
-			);
-			path = TransportsApi;
-			sourceTree = "<group>";
-		};
-		D0D3B6C722CD44FD00491B60 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D0D3B6C822CD451D00491B60 /* TransportsResponse.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		D0EAC1BC22CDB9D900C052A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */,
-				D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */,
 				D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */,
 				2D1309E322CE2BB10092484A /* MapPointsModel.swift */,
 			);
@@ -459,6 +436,7 @@
 				D09968EA22CD315D00713B37 /* Resources */,
 				78EA23B40EA97B26F2FA1D72 /* [CP] Copy Pods Resources */,
 				D0EBBA5622D20A590089F645 /* ShellScript */,
+				ED711E25778DA0B5EB5E3594 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -553,16 +531,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-resources.sh",
-				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -586,6 +559,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftlint autocorrect\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
+		ED711E25778DA0B5EB5E3594 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -594,16 +584,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0EBBA2822D1D7100089F645 /* TransportDetailDataManager.swift in Sources */,
-				D0D3B6C122CD432D00491B60 /* ApiError.swift in Sources */,
 				D0EBBA3C22D1F3160089F645 /* ModuledModelProtocol.swift in Sources */,
 				D0EBBA4522D1F6160089F645 /* TransportDetailSection.swift in Sources */,
 				D0D3B6B022CD3EC400491B60 /* TransportsApiClient.swift in Sources */,
 				D0EAC1BE22CDB9F800C052A2 /* MapPointsPosition.swift in Sources */,
-				D0D3B6BD22CD421A00491B60 /* Endpoint.swift in Sources */,
 				D0D3B6AD22CD3EC400491B60 /* TransportsPresenter.swift in Sources */,
 				D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */,
 				D0EBBA4A22D1F8290089F645 /* UITableViewCell+Extensions.swift in Sources */,
 				D0EBBA5522D1FD3A0089F645 /* UIFont+Extensions.swift in Sources */,
+				B45004C2247ADC3D009D2561 /* BaseApiParams.swift in Sources */,
 				D00D6DE022CE915C004F9638 /* MarkerView.swift in Sources */,
 				D0EBBA2622D1D7100089F645 /* TransportDetailRouter.swift in Sources */,
 				D006AC4D2381CD5F006F7D5E /* BaseViewController.swift in Sources */,
@@ -613,17 +602,15 @@
 				D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */,
 				D0EBC92022D26A27003D1476 /* String+Extensions.swift in Sources */,
 				D0D3B6AF22CD3EC400491B60 /* TransportsViewController.swift in Sources */,
-				D0D3B6C622CD446700491B60 /* TransportsApi.swift in Sources */,
 				D0EAC1C222CDBC8E00C052A2 /* TransportationElement.swift in Sources */,
 				D00D6DE222CE99DA004F9638 /* ActivityIndicator.swift in Sources */,
-				D0D3B6BF22CD425400491B60 /* TransportApiCase.swift in Sources */,
 				2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */,
 				D0EBBA3922D1D9D70089F645 /* HalfModalPresetntationController.swift in Sources */,
 				D0EBBA5322D1FD1A0089F645 /* TextStyles.swift in Sources */,
+				B45004C0247ADC07009D2561 /* TransportsRequest.swift in Sources */,
 				D006AC502381CFF4006F7D5E /* AlertActions.swift in Sources */,
 				D00D6DE922CE9D0F004F9638 /* NIbabble.swift in Sources */,
 				D0EBBA5122D1FC580089F645 /* UILabel+Extensions.swift in Sources */,
-				D0D3B6B122CD3EC400491B60 /* TransportsApiClientMock.swift in Sources */,
 				D0EBBA3522D1D92F0089F645 /* HalfModalInteractiveTransition.swift in Sources */,
 				2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */,
 				D0EBBA3E22D1F37F0089F645 /* TransportDetailModeuledModel.swift in Sources */,
@@ -632,11 +619,9 @@
 				D006AC522381D024006F7D5E /* TransportAlertActions.swift in Sources */,
 				D0EBBA4222D1F3D50089F645 /* TransportDetailTableViewCell.swift in Sources */,
 				D09968F022CD315D00713B37 /* AppDelegate.swift in Sources */,
-				D0D3B6C922CD451D00491B60 /* TransportsResponse.swift in Sources */,
-				D0EAC1C022CDBB7E00C052A2 /* Coordinate.swift in Sources */,
+				B45004B9247ACD7C009D2561 /* TPAPIClient.swift in Sources */,
 				D0EBBA2722D1D7100089F645 /* TransportDetailViewController.swift in Sources */,
 				D0EBBA4F22D1FBBF0089F645 /* TextConfigurable.swift in Sources */,
-				D0D3B6C322CD435200491B60 /* ApiClient.swift in Sources */,
 				D0EBBA3722D1D9510089F645 /* HalfModalTransitionAnimator.swift in Sources */,
 				D0EBBA2522D1D7100089F645 /* TransportDetailPresenter.swift in Sources */,
 			);

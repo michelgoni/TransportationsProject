@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import TransportationDomain
 
 protocol RetryableProtocol {
     func retry()

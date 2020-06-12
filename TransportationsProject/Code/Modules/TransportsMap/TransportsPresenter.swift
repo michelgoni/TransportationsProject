@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import TransportationDomain
 
 protocol TransportsPresenterProtocol: class {
     /**
@@ -40,15 +41,15 @@ final class TransportsPresenter {
     // MARK: - Private methods
     private func buildMapPoints(mapPoints: MapPointsModel) -> MapPointsPosition? {
         
-        let cameraPosition = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: mapPoints.coordinate.latitude,
-                                                                              longitude: mapPoints.coordinate.longitude),
+        let cameraPosition = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: mapPoints.initialCoordinate.latitude,
+                                                                              longitude: mapPoints.initialCoordinate.longitude),
                                                zoom: 17,
                                                bearing: 0,
                                                viewingAngle: 0)
         
         let markers = mapPoints.transportElements.map { element -> GMSMarker in
             
-            return element.getMarker()
+            element.getMarker()
         }
         return MapPointsPosition(cameraPosition: cameraPosition, markers: markers)
     }
@@ -59,32 +60,25 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     func getContent() {
         
         view?.showLoading()
-        
-        dataManager.getTransports { [weak self] result in
-            guard let self = self else {return}
-            self.view?.hideLoading()
+        dataManager.getTransportsElements { [weak self] result in
+            self?.view?.hideLoading()
+            
             switch result {
             case .success(let transports):
-                guard let transports = transports else {return}
-                
-                let transportElements = transports.compactMap { element -> TransportationElementRepresentable? in
-                    return element.getTransportElement()
+               
+                let transportElements = transports.compactMap {element -> TransportationElementRepresentable? in
                     
+                    TransportationElement(transport: Transports(coordinate: Coordinate(latitude: element.coordinate.latitude,
+                                                                                       longitude: element.coordinate.longitude),
+                                                                companyZone: element.transportationDetail.transportationType,
+                                                                transportationDetail: element.transportationDetail))
                 }
-                self.transportElements = transportElements
-                let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
-                
-                guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
-                self.view?.showUserLocation(mapPoints: mapPoints)
-                
+                self?.dataManager.setTransportsElements(transportElements: transportElements)
+                let mapPointsModel = MapPointsModel(transportElements: transportElements, initialCoordinate: Coordinate.mockCoordinate)
+                guard let mapPoints = self?.buildMapPoints(mapPoints: mapPointsModel) else {return}
+                self?.view?.showUserLocation(mapPoints: mapPoints)
             case .failure(let error):
-                self.view?.hideLoading()
-                self.view?.alert(title: "ERROR_TITLE".localized,
-                                 message: error.localizedDescription,
-                                 handler: { _ in
-                    self.getContent()
-                })
-              
+                self?.view?.alert(title: "ERROR_TITLE".localized, message: error.errorString, handler: nil)
             }
         }
     }
@@ -95,9 +89,9 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     
     func markerTapped(coordinate: Coordinate) {
         
-        guard let transportDetail = transportElements?
-            .first(where: { $0.coordinate.latitude == coordinate.latitude
-                && $0.coordinate.longitude == coordinate.longitude})?
+        guard let transportDetail = dataManager
+            .getTransportsElements()?
+            .first(where: { $0.transport.coordinate.latitude == coordinate.latitude && $0.transport.coordinate.longitude == coordinate.longitude})?
             .getTransportationDetail() else {return}
         let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
         TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
