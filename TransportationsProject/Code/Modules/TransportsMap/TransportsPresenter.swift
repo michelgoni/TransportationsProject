@@ -67,10 +67,13 @@ extension TransportsPresenter: TransportsPresenterProtocol {
             case .success(let transports):
                
                 let transportElements = transports.compactMap {element -> TransportationElementRepresentable? in
+                    
                     TransportationElement(transport: Transports(coordinate: Coordinate(latitude: element.coordinate.latitude,
                                                                                        longitude: element.coordinate.longitude),
-                                                                companyZone: element.companyZone))
+                                                                companyZone: element.transportationDetail.transportationType,
+                                                                transportationDetail: element.transportationDetail))
                 }
+                self?.dataManager.setTransportsElements(transportElements: transportElements)
                 let mapPointsModel = MapPointsModel(transportElements: transportElements, initialCoordinate: Coordinate.mockCoordinate)
                 guard let mapPoints = self?.buildMapPoints(mapPoints: mapPointsModel) else {return}
                 self?.view?.showUserLocation(mapPoints: mapPoints)
@@ -86,12 +89,11 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     
     func markerTapped(coordinate: Coordinate) {
         
-        let transportDetail = transportElements?.first(where: { $0.transport.coordinate.latitude == coordinate.latitude && $0.transport.coordinate.longitude == coordinate.longitude})
-//        guard let transportDetail = transportElements?
-//            .first(where: { $0.coordinate.latitude == coordinate.latitude
-//                && $0.coordinate.longitude == coordinate.longitude})?
-//            .getTransportationDetail() else {return}
-//        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
-//        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
+        guard let transportDetail = dataManager
+            .getTransportsElements()?
+            .first(where: { $0.transport.coordinate.latitude == coordinate.latitude && $0.transport.coordinate.longitude == coordinate.longitude})?
+            .getTransportationDetail() else {return}
+        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
+        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
     }
 }

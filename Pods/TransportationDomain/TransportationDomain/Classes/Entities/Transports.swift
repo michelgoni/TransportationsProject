@@ -15,14 +15,19 @@ public protocol TransportationElementRepresentable {
     
     var coordinate: Coordinate { get set }
     var companyZone: CompanyZone { get }
+    var transportationDetail: TransportationDetail { get }
 }
 
 public struct Transports: TransportationElementRepresentable {
+    
     public var coordinate: Coordinate
     public var companyZone: CompanyZone
+    public var transportationDetail: TransportationDetail
     
-    public init(coordinate: Coordinate, companyZone: CompanyZone ) {
+    public init(coordinate: Coordinate,
+                companyZone: CompanyZone, transportationDetail: TransportationDetail ) {
         self.coordinate = coordinate
         self.companyZone = companyZone
+        self.transportationDetail = transportationDetail
     }
 }

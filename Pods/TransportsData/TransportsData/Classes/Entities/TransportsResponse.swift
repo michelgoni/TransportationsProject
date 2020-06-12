@@ -95,7 +95,7 @@ extension Transports {
     
     public init(transport: TransportsResponse) {
         self.init(coordinate: Coordinate(latitude: transport.elementYPosition,
-                                         longitude: transport.elementXPosition), companyZone: transport.getCompanyZone())
+                                         longitude: transport.elementXPosition), companyZone: transport.getCompanyZone(), transportationDetail: TransportationDetail(address: transport.address, transportationType: transport.getCompanyZone()))
         
     }
 }

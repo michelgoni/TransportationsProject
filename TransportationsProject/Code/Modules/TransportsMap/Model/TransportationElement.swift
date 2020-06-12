@@ -9,6 +9,7 @@
 import UIKit
 import GoogleMaps
 import TransportationDomain
+import TransportsUI
 
 protocol TransportationDetailRepresentable {
     var address: TextConfigurableProtocol {get set}
@@ -29,7 +30,7 @@ struct TransportationDetail: TransportationDetailRepresentable {
 protocol TransportationElementRepresentable {
     
     var transport: Transports {get set}
-   // var transportationDetail: TransportationDetailRepresentable {get set}
+    // var transportationDetail: TransportationDetailRepresentable {get set}
     func getMarker() -> GMSMarker
     func getTransportationDetail() -> TransportationDetailRepresentable
 }
@@ -37,12 +38,12 @@ protocol TransportationElementRepresentable {
 struct TransportationElement: TransportationElementRepresentable {
     
     var transport: Transports
-   // var transportationDetail: TransportationDetailRepresentable
+    // var transportationDetail: TransportationDetailRepresentable
     
     func getMarker() -> GMSMarker {
-
+        
         let marker = GMSMarker()
-       
+        
         marker.position = CLLocationCoordinate2D(latitude: transport.coordinate.latitude,
                                                  longitude: transport.coordinate.longitude)
         let markerView = MarkerView(frame: CGRect(x: 0, y: 0, width: Constants.MarkerView.markerViewWidth,
@@ -52,10 +53,19 @@ struct TransportationElement: TransportationElementRepresentable {
         return marker
     }
     
-//    func getTransportationDetail() -> TransportationDetailRepresentable {
-//
-//        return TransportationDetail(address: <#T##TextConfigurableProtocol#>, icon: <#T##UIImage#>, transportationType: <#T##TextConfigurableProtocol#>, actionEnabled: <#T##Bool#>)
-//    }
+        func getTransportationDetail() -> TransportationDetailRepresentable {
+    
+            return TransportationDetail(address: TextConfigurable(text: transport.transportationDetail.address,
+                                                                  font: fontStyle.font(forTextStyle: .body),
+                                                                  color: .black,
+                                                                  alignment: .left),
+                                        icon: transport.getCompanyZoneIcon(),
+                                        transportationType: TextConfigurable(text: transport.retrieveTransportationType(),
+                                                                             font: fontStyle.font(forTextStyle: .body),
+                                                                             color: .black,
+                                                                             alignment: .left),
+                                        actionEnabled: true)
+        }
 }
 
 extension Transports {
@@ -74,7 +84,25 @@ extension Transports {
             return #imageLiteral(resourceName: "electricMotorbike.png")
         case .companyZoneUnknown:
             return #imageLiteral(resourceName: "motorbike.png")
-
+            
+        }
+    }
+    
+    func retrieveTransportationType() -> String {
+        
+        switch companyZone {
+        case .companyZoneA:
+            return "METRO".localized
+        case .companyZoneB:
+            return "BUS".localized
+        case .companyZoneC:
+            return "CAR".localized
+        case .companyZoneD:
+            return "ELECTRIC_CAR".localized
+        case .companyZoneE:
+            return "ELECTRIC_MOTORBIKE".localized
+        case .companyZoneUnknown:
+            return "BIKE".localized
         }
     }
 }

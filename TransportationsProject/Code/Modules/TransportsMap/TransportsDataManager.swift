@@ -16,6 +16,8 @@ protocol TransportsDataManagerProtocol: class {
      */
     func getTitle() -> String
     func getTransportsElements(completion: @escaping(Result<[Transports], ErrorResponse>) -> Void)
+    func setTransportsElements(transportElements: [TransportationElementRepresentable])
+    func getTransportsElements() -> [TransportationElementRepresentable]?
 }
 
 final class TransportsDataManager {
@@ -24,6 +26,7 @@ final class TransportsDataManager {
     
     // MARK: - Private variables
     private let useCase: TransportationsUseCase
+    private var transportElements: [TransportationElementRepresentable]?
     
     // MARK: - Initialization
     
@@ -33,6 +36,14 @@ final class TransportsDataManager {
 }
 
 extension TransportsDataManager: TransportsDataManagerProtocol {
+    
+    func setTransportsElements(transportElements: [TransportationElementRepresentable]) {
+        self.transportElements = transportElements
+    }
+    
+    func getTransportsElements() -> [TransportationElementRepresentable]? {
+        return self.transportElements
+    }
     
     func getTitle() -> String {
         
