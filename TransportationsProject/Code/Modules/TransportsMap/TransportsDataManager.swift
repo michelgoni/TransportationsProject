@@ -8,6 +8,7 @@
 
 import UIKit
 import TransportationDomain
+import TransportsData
 
 protocol TransportsDataManagerProtocol: class {
     /**

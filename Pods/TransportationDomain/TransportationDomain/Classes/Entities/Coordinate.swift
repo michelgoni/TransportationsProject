@@ -22,7 +22,7 @@ public struct Coordinate: CoordinateRepresentable {
         return Coordinate(latitude: 38.739429, longitude: -9.137115)
     }
     
-    static var mockCoordinate: Coordinate {
+    public static var mockCoordinate: Coordinate {
         return Coordinate(latitude: 38.71395031,
                           longitude: -9.13916688)
     }

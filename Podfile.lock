@@ -8,19 +8,19 @@ PODS:
   - SwiftLint (0.39.2)
   - TransportationApiClient (0.1.2.beta4):
     - Alamofire (~> 5.2)
-  - TransportationDomain (0.1.4.beta16):
+  - TransportationDomain (0.1.4.beta18):
     - TransportsUI (= 0.1.1.beta7)
-  - TransportsData (0.1.11.beta4):
+  - TransportsData (0.1.11.beta6):
     - TransportationApiClient (= 0.1.2.beta4)
-    - TransportationDomain (= 0.1.4.beta16)
+    - TransportationDomain (= 0.1.4.beta18)
   - TransportsUI (0.1.1.beta7)
 
 DEPENDENCIES:
   - GoogleMaps
   - SwiftLint
   - TransportationApiClient (= 0.1.2.beta4)
-  - TransportationDomain (= 0.1.4.beta16)
-  - TransportsData (= 0.1.11.beta4)
+  - TransportationDomain (= 0.1.4.beta18)
+  - TransportsData (= 0.1.11.beta6)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -38,10 +38,10 @@ SPEC CHECKSUMS:
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   TransportationApiClient: 7dbf668ad152b659e81a48c233a00da5290ade78
-  TransportationDomain: ddfd2d5b5cceb9e6deebd11b7652267e833fc1e2
-  TransportsData: 9fc21f3dc47769433c3bc7273d0413058209b9fa
+  TransportationDomain: 6711147a5312211450956c193c7e246b388d6e2d
+  TransportsData: 04836f9ebc5ec04b71bad6dcb35b875fd9c3f716
   TransportsUI: 958d03606ee4506e8486feff83b25d805788c644
 
-PODFILE CHECKSUM: f12b6f71d52b6a180a6ca87808fae7816e5a4137
+PODFILE CHECKSUM: 10d6c45ff239a0a5c153cc697c94cdafd8d4e292
 
 COCOAPODS: 1.9.1

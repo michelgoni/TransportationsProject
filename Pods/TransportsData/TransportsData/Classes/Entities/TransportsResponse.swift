@@ -50,14 +50,14 @@ public struct TransportsResponse: Codable {
         case bikesAvailable
     }
     
-    public enum CompanyZone: String {
-        case metro = "378"
-        case bus = "382"
-        case car = "545"
-        case electricCar = "467"
-        case electricMotorBike = "473"
-        case bike = "412"
-    }
+//    public enum CompanyZone: String {
+//        case metro = "378"
+//        case bus = "382"
+//        case car = "545"
+//        case electricCar = "467"
+//        case electricMotorBike = "473"
+//        case bike = "412"
+//    }
     
     public func getAddress() -> TextConfigurableProtocol {
         
@@ -70,13 +70,32 @@ public struct TransportsResponse: Codable {
     public func map() -> Transports {
         return Transports(transport: self)
     }
+    
+    public func getCompanyZone() -> CompanyZone {
+        switch companyZoneId {
+        case 378:
+            return CompanyZone.companyZoneA
+        case 382:
+            return CompanyZone.companyZoneB
+        case 545:
+            return CompanyZone.companyZoneC
+        case 467:
+            return CompanyZone.companyZoneD
+        case 473:
+           return CompanyZone.companyZoneE
+        case 412:
+           return CompanyZone.companyZoneE
+        default:
+           return CompanyZone.companyZoneA
+        }
+    }
 }
 
 extension Transports {
     
     public init(transport: TransportsResponse) {
         self.init(coordinate: Coordinate(latitude: transport.elementYPosition,
-                                         longitude: transport.elementXPosition))
+                                         longitude: transport.elementXPosition), companyZone: transport.getCompanyZone())
         
     }
 }

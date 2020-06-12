@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import TransportationDomain
 
 protocol TransportationDetailRepresentable {
     var address: TextConfigurableProtocol {get set}
@@ -27,7 +28,7 @@ struct TransportationDetail: TransportationDetailRepresentable {
 
 protocol TransportationElementRepresentable {
     
-    var coordinate: Coordinate {get set}
+    var transport: Transports {get set}
    // var transportationDetail: TransportationDetailRepresentable {get set}
     func getMarker() -> GMSMarker
 //    func getTransportationDetail() -> TransportationDetailRepresentable
@@ -35,17 +36,18 @@ protocol TransportationElementRepresentable {
 
 struct TransportationElement: TransportationElementRepresentable {
     
-    var coordinate: Coordinate
+    var transport: Transports
    // var transportationDetail: TransportationDetailRepresentable
     
     func getMarker() -> GMSMarker {
 
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: coordinate.latitude,
-                                                 longitude: coordinate.longitude)
+       
+        marker.position = CLLocationCoordinate2D(latitude: transport.coordinate.latitude,
+                                                 longitude: transport.coordinate.longitude)
         let markerView = MarkerView(frame: CGRect(x: 0, y: 0, width: Constants.MarkerView.markerViewWidth,
                                                   height: Constants.MarkerView.markerViewHeight),
-                                    image: #imageLiteral(resourceName: "bike.png")) 
+                                    image: transport.getCompanyZoneIcon()) 
         marker.iconView = markerView
         return marker
     }
@@ -55,3 +57,25 @@ struct TransportationElement: TransportationElementRepresentable {
 //        return transportationDetail
 //    }
 }
+
+extension Transports {
+    
+    func getCompanyZoneIcon() -> UIImage {
+        switch companyZone {
+        case .companyZoneA:
+            return #imageLiteral(resourceName: "bike.png")
+        case .companyZoneB:
+            return #imageLiteral(resourceName: "bus.png")
+        case .companyZoneC:
+            return #imageLiteral(resourceName: "car.png")
+        case .companyZoneD:
+            return #imageLiteral(resourceName: "electricCar.png")
+        case .companyZoneE:
+            return #imageLiteral(resourceName: "electricMotorbike.png")
+        case .companyZoneUnknown:
+            return #imageLiteral(resourceName: "motorbike.png")
+
+        }
+    }
+}
+

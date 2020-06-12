@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import TransportationDomain
 
 struct MapPointsModel {
     var transportElements: [TransportationElementRepresentable]
-    var coordinate: Coordinate
+    var initialCoordinate: Coordinate
 }
 

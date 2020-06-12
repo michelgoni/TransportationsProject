@@ -8,6 +8,7 @@
 
 import UIKit
 import GoogleMaps
+import TransportationDomain
 
 protocol TransportsPresenterProtocol: class {
     /**
@@ -40,15 +41,15 @@ final class TransportsPresenter {
     // MARK: - Private methods
     private func buildMapPoints(mapPoints: MapPointsModel) -> MapPointsPosition? {
         
-        let cameraPosition = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: mapPoints.coordinate.latitude,
-                                                                              longitude: mapPoints.coordinate.longitude),
+        let cameraPosition = GMSCameraPosition(target: CLLocationCoordinate2D(latitude: mapPoints.initialCoordinate.latitude,
+                                                                              longitude: mapPoints.initialCoordinate.longitude),
                                                zoom: 17,
                                                bearing: 0,
                                                viewingAngle: 0)
         
         let markers = mapPoints.transportElements.map { element -> GMSMarker in
             
-             element.getMarker()
+            element.getMarker()
         }
         return MapPointsPosition(cameraPosition: cameraPosition, markers: markers)
     }
@@ -64,44 +65,19 @@ extension TransportsPresenter: TransportsPresenterProtocol {
             
             switch result {
             case .success(let transports):
-                debugPrint(transports)
+               
                 let transportElements = transports.compactMap {element -> TransportationElementRepresentable? in
-                     TransportationElement(coordinate: Coordinate(latitude: element.coordinate.latitude, longitude: element.coordinate.longitude))
+                    TransportationElement(transport: Transports(coordinate: Coordinate(latitude: element.coordinate.latitude,
+                                                                                       longitude: element.coordinate.longitude),
+                                                                companyZone: element.companyZone))
                 }
-                let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
-                 guard let mapPoints = self?.buildMapPoints(mapPoints: mapPointsModel) else {return}
+                let mapPointsModel = MapPointsModel(transportElements: transportElements, initialCoordinate: Coordinate.mockCoordinate)
+                guard let mapPoints = self?.buildMapPoints(mapPoints: mapPointsModel) else {return}
                 self?.view?.showUserLocation(mapPoints: mapPoints)
             case .failure(let error):
                 self?.view?.alert(title: "ERROR_TITLE".localized, message: error.errorString, handler: nil)
             }
         }
-        
-//        dataManager.getTransports(success: { [weak self] response in
-//
-//            guard let self = self else {return}
-//            self.view?.hideLoading()
-//            let transportElements = response.compactMap { element -> TransportationElementRepresentable? in
-//                return element.getTransportElement()
-//
-//            }
-//             self.transportElements = transportElements
-//            let mapPointsModel = MapPointsModel(transportElements: transportElements, coordinate: Coordinate.mockCoordinate)
-//
-//            guard let mapPoints = self.buildMapPoints(mapPoints: mapPointsModel) else {return}
-//            self.view?.showUserLocation(mapPoints: mapPoints)
-//        }) { error in
-//
-//             self.view?.hideLoading()
-//            if Environment.shared.isMock {
-//                self.view?.alert(title: "ERROR_TITLE".localized, message: error.errorString, handler: nil)
-//            } else {
-//                self.view?.alert(title: "ERROR_TITLE".localized,
-//                                 message: "ERROR_GETTING_TRANSPORTS".localized,
-//                                 handler: { _ in
-//                                    self.getContent()
-//                })
-//            }
-//        }
     }
     
     func getTitle() {
@@ -110,11 +86,11 @@ extension TransportsPresenter: TransportsPresenterProtocol {
     
     func markerTapped(coordinate: Coordinate) {
         
-//        guard let transportDetail = transportElements?
-//            .first(where: { $0.coordinate.latitude == coordinate.latitude
-//                && $0.coordinate.longitude == coordinate.longitude})?
-//            .getTransportationDetail() else {return}
-//        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
-//        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
+        //        guard let transportDetail = transportElements?
+        //            .first(where: { $0.coordinate.latitude == coordinate.latitude
+        //                && $0.coordinate.longitude == coordinate.longitude})?
+        //            .getTransportationDetail() else {return}
+        //        let transportDetailViewController = TransportDetailRouter(transportDetail: transportDetail).getPresentationController()
+        //        TransportDetailRouter().presentThirdHalfOfScreen(viewController: transportDetailViewController)
     }
 }

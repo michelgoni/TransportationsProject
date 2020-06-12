@@ -34,10 +34,8 @@
 		D0D3B6B222CD3EC400491B60 /* TransportsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */; };
 		D0D3B6B622CD3EE700491B60 /* Transports.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D3B6B522CD3EE700491B60 /* Transports.storyboard */; };
 		D0D3B6B922CD40C200491B60 /* Enviroment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6B822CD40C200491B60 /* Enviroment.swift */; };
-		D0D3B6C922CD451D00491B60 /* TransportsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D3B6C822CD451D00491B60 /* TransportsResponse.swift */; };
 		D0EAC1BB22CDAD5600C052A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BA22CDAD5600C052A2 /* Constants.swift */; };
 		D0EAC1BE22CDB9F800C052A2 /* MapPointsPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */; };
-		D0EAC1C022CDBB7E00C052A2 /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */; };
 		D0EAC1C222CDBC8E00C052A2 /* TransportationElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */; };
 		D0EBBA2522D1D7100089F645 /* TransportDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2122D1D7100089F645 /* TransportDetailPresenter.swift */; };
 		D0EBBA2622D1D7100089F645 /* TransportDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EBBA2222D1D7100089F645 /* TransportDetailRouter.swift */; };
@@ -95,10 +93,8 @@
 		D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsDataManager.swift; sourceTree = "<group>"; };
 		D0D3B6B522CD3EE700491B60 /* Transports.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Transports.storyboard; sourceTree = "<group>"; };
 		D0D3B6B822CD40C200491B60 /* Enviroment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enviroment.swift; sourceTree = "<group>"; };
-		D0D3B6C822CD451D00491B60 /* TransportsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsResponse.swift; sourceTree = "<group>"; };
 		D0EAC1BA22CDAD5600C052A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsPosition.swift; sourceTree = "<group>"; };
-		D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
 		D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportationElement.swift; sourceTree = "<group>"; };
 		D0EBBA2122D1D7100089F645 /* TransportDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailPresenter.swift; sourceTree = "<group>"; };
 		D0EBBA2222D1D7100089F645 /* TransportDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportDetailRouter.swift; sourceTree = "<group>"; };
@@ -266,7 +262,6 @@
 		D0D3B69B22CD3E1E00491B60 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				D0D3B6C422CD444200491B60 /* TransportsApi */,
 				D0D3B6B722CD40A100491B60 /* Common */,
 				D0D3B6A522CD3E9400491B60 /* Modules */,
 			);
@@ -349,27 +344,10 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		D0D3B6C422CD444200491B60 /* TransportsApi */ = {
-			isa = PBXGroup;
-			children = (
-				D0D3B6C722CD44FD00491B60 /* Model */,
-			);
-			path = TransportsApi;
-			sourceTree = "<group>";
-		};
-		D0D3B6C722CD44FD00491B60 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				D0D3B6C822CD451D00491B60 /* TransportsResponse.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		D0EAC1BC22CDB9D900C052A2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D0EAC1BD22CDB9F800C052A2 /* MapPointsPosition.swift */,
-				D0EAC1BF22CDBB7E00C052A2 /* Coordinate.swift */,
 				D0EAC1C122CDBC8E00C052A2 /* TransportationElement.swift */,
 				2D1309E322CE2BB10092484A /* MapPointsModel.swift */,
 			);
@@ -642,8 +620,6 @@
 				D0EBBA4222D1F3D50089F645 /* TransportDetailTableViewCell.swift in Sources */,
 				D09968F022CD315D00713B37 /* AppDelegate.swift in Sources */,
 				B45004B9247ACD7C009D2561 /* TPAPIClient.swift in Sources */,
-				D0D3B6C922CD451D00491B60 /* TransportsResponse.swift in Sources */,
-				D0EAC1C022CDBB7E00C052A2 /* Coordinate.swift in Sources */,
 				D0EBBA2722D1D7100089F645 /* TransportDetailViewController.swift in Sources */,
 				D0EBBA4F22D1FBBF0089F645 /* TextConfigurable.swift in Sources */,
 				D0EBBA3722D1D9510089F645 /* HalfModalTransitionAnimator.swift in Sources */,
