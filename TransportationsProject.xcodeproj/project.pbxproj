@@ -10,6 +10,7 @@
 		1F1F47546097C3F6959D030E /* Pods_TransportationsProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBB94F0703EB4F0582903BBF /* Pods_TransportationsProject.framework */; };
 		2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309DF22CE04070092484A /* SignedNumeric+Extensions.swift */; };
 		2D1309E422CE2BB10092484A /* MapPointsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1309E322CE2BB10092484A /* MapPointsModel.swift */; };
+		B417714524953C9F00A881DE /* TransportMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B417714424953C9F00A881DE /* TransportMapViewModel.swift */; };
 		B45004B9247ACD7C009D2561 /* TPAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45004B8247ACD7C009D2561 /* TPAPIClient.swift */; };
 		B45004C0247ADC07009D2561 /* TransportsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45004BF247ADC07009D2561 /* TransportsRequest.swift */; };
 		B45004C2247ADC3D009D2561 /* BaseApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45004C1247ADC3D009D2561 /* BaseApiParams.swift */; };
@@ -67,6 +68,7 @@
 		2D1309E322CE2BB10092484A /* MapPointsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPointsModel.swift; sourceTree = "<group>"; };
 		897F1BB77CB0206CA2860903 /* Pods-TransportationsProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.release.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.release.xcconfig"; sourceTree = "<group>"; };
 		99B5D7A0EDBB05AE99BC4C78 /* Pods-TransportationsProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TransportationsProject.debug.xcconfig"; path = "Target Support Files/Pods-TransportationsProject/Pods-TransportationsProject.debug.xcconfig"; sourceTree = "<group>"; };
+		B417714424953C9F00A881DE /* TransportMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportMapViewModel.swift; sourceTree = "<group>"; };
 		B45004B8247ACD7C009D2561 /* TPAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPAPIClient.swift; sourceTree = "<group>"; };
 		B45004BF247ADC07009D2561 /* TransportsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransportsRequest.swift; sourceTree = "<group>"; };
 		B45004C1247ADC3D009D2561 /* BaseApiParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiParams.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				D0D3B6A822CD3EC400491B60 /* TransportsRouter.swift */,
 				D0D3B6A922CD3EC400491B60 /* TransportsViewController.swift */,
 				D0D3B6AC22CD3EC400491B60 /* TransportsDataManager.swift */,
+				B417714424953C9F00A881DE /* TransportMapViewModel.swift */,
 			);
 			path = TransportsMap;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				D00D6DE922CE9D0F004F9638 /* NIbabble.swift in Sources */,
 				D0EBBA5122D1FC580089F645 /* UILabel+Extensions.swift in Sources */,
 				D0EBBA3522D1D92F0089F645 /* HalfModalInteractiveTransition.swift in Sources */,
+				B417714524953C9F00A881DE /* TransportMapViewModel.swift in Sources */,
 				2D1309E022CE04070092484A /* SignedNumeric+Extensions.swift in Sources */,
 				D0EBBA3E22D1F37F0089F645 /* TransportDetailModeuledModel.swift in Sources */,
 				D0EBBA3322D1D8F20089F645 /* HalfModalTransitioning.swift in Sources */,

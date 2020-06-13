@@ -10,6 +10,10 @@ target 'TransportationsProject' do
   # Pods for TransportationsProject
   pod 'GoogleMaps'
   pod 'SwiftLint'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'NSObject+Rx'
+  pod 'Action'
   pod 'TransportsData', '0.1.11.beta7'
   pod 'TransportationDomain', '0.1.4.beta20'
   pod 'TransportationApiClient', '0.1.2.beta4'
