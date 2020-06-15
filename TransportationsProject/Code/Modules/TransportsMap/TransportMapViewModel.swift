@@ -16,8 +16,7 @@ protocol TransportMapViewModelProtocol {
 
 class TransportMapViewModel: TransportMapViewModelProtocol {
     
-   
-    
+
     var useCase: TransportationsUseCase
     
     required init (useCase: TransportationsUseCase) {
@@ -26,9 +25,9 @@ class TransportMapViewModel: TransportMapViewModelProtocol {
     
     lazy var getTransports: Action<String, Transports> = { this in
         
-        Action<String, Transports> {_ in
+        Action<String, Transports> { companyZone in
             
-            return this.useCase.
+            return this.useCase.getElements(companyZone: <#T##String#>, completion: <#T##(Result<[Transports], ErrorResponse>) -> Void#>)
         }
         
     }(self)

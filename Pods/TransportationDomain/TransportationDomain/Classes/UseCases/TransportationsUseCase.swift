@@ -6,13 +6,17 @@
 //
 
 import Foundation
+import RxSwift
 
 public protocol TransportationsUseCase {
     
     func getElements(companyZone: String, completion: @escaping (Result<[Transports], ErrorResponse>) -> Void)
+    func getTrasportElements(companyZone: String)-> Single<Result<[Transports], ErrorResponse>>
 }
 
 public class TransportationsUseCaseImpl: TransportationsUseCase {
+   
+    
     
     private let repository: TransportRepository!
     
@@ -23,6 +27,10 @@ public class TransportationsUseCaseImpl: TransportationsUseCase {
     //MARK: -TransportationsUseCase
     public func getElements(companyZone: String, completion: @escaping (Result<[Transports], ErrorResponse>) -> Void) {
         repository.getElements(companyZone: companyZone, completion: completion)
+    }
+    
+    public func getTrasportElements(companyZone: String)-> Single<Result<[Transports], ErrorResponse>> {
+        repository.getTrasportElements(companyZone: companyZone)
     }
     
     
