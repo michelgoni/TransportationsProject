@@ -11,7 +11,7 @@ import Action
 import TransportationDomain
 
 protocol TransportMapViewModelProtocol {
-    var getTransports: Action<String, Transports> { get }
+    var getTransports: Action<String, [Transports]> { get }
 }
 
 class TransportMapViewModel: TransportMapViewModelProtocol {
@@ -23,11 +23,11 @@ class TransportMapViewModel: TransportMapViewModelProtocol {
         self.useCase = useCase
     }
     
-    lazy var getTransports: Action<String, Transports> = { this in
+    lazy var getTransports: Action<String, [Transports]> = { this in
         
-        Action<String, Transports> { companyZone in
+        Action<String, [Transports]> { companyZone in
             
-            return this.u
+            return this.useCase.getTrasportElements(companyZone: companyZone)
         }
         
     }(self)
