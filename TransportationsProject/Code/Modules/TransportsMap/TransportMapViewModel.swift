@@ -27,7 +27,7 @@ class TransportMapViewModel: TransportMapViewModelProtocol {
         
         Action<String, Transports> { companyZone in
             
-            return this.useCase.getElements(companyZone: <#T##String#>, completion: <#T##(Result<[Transports], ErrorResponse>) -> Void#>)
+            return this.u
         }
         
     }(self)

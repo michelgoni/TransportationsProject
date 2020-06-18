@@ -1,10 +1,20 @@
 PODS:
+  - Action (4.1.0):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
   - Alamofire (5.2.1)
   - GoogleMaps (3.9.0):
     - GoogleMaps/Maps (= 3.9.0)
   - GoogleMaps/Base (3.9.0)
   - GoogleMaps/Maps (3.9.0):
     - GoogleMaps/Base
+  - "NSObject+Rx (5.1.0)":
+    - RxSwift (~> 5.1)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SwiftLint (0.39.2)
   - TransportationApiClient (0.1.3):
@@ -18,7 +28,11 @@ PODS:
   - TransportsUI (0.1.2)
 
 DEPENDENCIES:
+  - Action
   - GoogleMaps
+  - "NSObject+Rx"
+  - RxCocoa
+  - RxSwift
   - SwiftLint
   - TransportationApiClient (= 0.1.3)
   - TransportationDomain (= 0.1.5.rxbeta1)
@@ -26,8 +40,12 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Action
     - Alamofire
     - GoogleMaps
+    - "NSObject+Rx"
+    - RxCocoa
+    - RxRelay
     - RxSwift
     - SwiftLint
   https://github.com/michelgoni/TransportProjectSpecs:
@@ -37,8 +55,12 @@ SPEC REPOS:
     - TransportsUI
 
 SPEC CHECKSUMS:
+  Action: 79e6c5dc91e13eea045ab6744b3e5609086671aa
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  "NSObject+Rx": fa6bbcc1ab1faa06b01466bc09b1e0692bbc5946
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   TransportationApiClient: d9704e331b15d5aa24b37aec8d94b40b5ae022b0
@@ -46,6 +68,6 @@ SPEC CHECKSUMS:
   TransportsData: b73a8880da9f5a500339d48c106ddf353610d6b6
   TransportsUI: 9b2fa0c622246b863b41a3d0285c86e9292efef8
 
-PODFILE CHECKSUM: 17d45475055761c7eb3e9b0d63a0a287fbb47442
+PODFILE CHECKSUM: 9f446645b20cb96a46992155ff9319deaaa43d66
 
 COCOAPODS: 1.9.1

@@ -6,12 +6,16 @@ source 'https://github.com/michelgoni/TransportProjectSpecs.git'
 target 'TransportationsProject' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-
+  
   # Pods for TransportationsProject
   pod 'GoogleMaps'
   pod 'SwiftLint'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'NSObject+Rx'
+  pod 'Action'
   pod 'TransportsData', '0.2.0.rxbeta2'
   pod 'TransportationDomain', '0.1.5.rxbeta1'
   pod 'TransportationApiClient', '0.1.3'
-
+  
 end
