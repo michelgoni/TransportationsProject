@@ -1,9 +1,28 @@
 PODS:
   - Alamofire (5.2.1)
-  - GoogleMaps (3.9.0):
-    - GoogleMaps/Maps (= 3.9.0)
-  - GoogleMaps/Base (3.9.0)
-  - GoogleMaps/Maps (3.9.0):
+  - Google-Maps-iOS-Utils (4.1.0):
+    - Google-Maps-iOS-Utils/Clustering (= 4.1.0)
+    - Google-Maps-iOS-Utils/Geometry (= 4.1.0)
+    - Google-Maps-iOS-Utils/GeometryUtils (= 4.1.0)
+    - Google-Maps-iOS-Utils/Heatmap (= 4.1.0)
+    - Google-Maps-iOS-Utils/QuadTree (= 4.1.0)
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Clustering (4.1.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Geometry (4.1.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/GeometryUtils (4.1.0):
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/Heatmap (4.1.0):
+    - Google-Maps-iOS-Utils/QuadTree
+    - GoogleMaps
+  - Google-Maps-iOS-Utils/QuadTree (4.1.0):
+    - GoogleMaps
+  - GoogleMaps (5.2.0):
+    - GoogleMaps/Maps (= 5.2.0)
+  - GoogleMaps/Base (5.2.0)
+  - GoogleMaps/Maps (5.2.0):
     - GoogleMaps/Base
   - SwiftLint (0.39.2)
   - TransportationApiClient (0.1.3):
@@ -16,7 +35,7 @@ PODS:
   - TransportsUI (0.1.2)
 
 DEPENDENCIES:
-  - GoogleMaps
+  - Google-Maps-iOS-Utils (~> 4.1.0)
   - SwiftLint
   - TransportationApiClient (= 0.1.3)
   - TransportationDomain (= 0.1.5)
@@ -25,9 +44,10 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - Google-Maps-iOS-Utils
     - GoogleMaps
     - SwiftLint
-  https://github.com/michelgoni/TransportProjectSpecs:
+  https://github.com/michelgoni/TransportProjectSpecs.git:
     - TransportationApiClient
     - TransportationDomain
     - TransportsData
@@ -35,13 +55,14 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-  GoogleMaps: 4b5346bddfe6911bb89155d43c903020170523ac
+  Google-Maps-iOS-Utils: 3343332b18dfd5be8f1f44edd7d481ace3da4d9a
+  GoogleMaps: 025272d5876d3b32604e5c080dc25eaf68764693
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
   TransportationApiClient: d9704e331b15d5aa24b37aec8d94b40b5ae022b0
   TransportationDomain: c72d59b4f7522d2046d9e818cf26b933b0a59bb6
   TransportsData: 974078b31a4407ce3c0312fce1e25500c606d6dc
   TransportsUI: 9b2fa0c622246b863b41a3d0285c86e9292efef8
 
-PODFILE CHECKSUM: be5d24c31b113ec3540fd9187d4c2cb32ac91538
+PODFILE CHECKSUM: f30354684cb218b0cdee9835efcd944f5fff2d03
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.11.3
